@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.learn.machinelearningandroid.customview.CustomViewActivity
 import com.learn.machinelearningandroid.databinding.ActivityMainBinding
+import com.learn.machinelearningandroid.imageclassification.ImageClassificationActivity
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -22,10 +23,18 @@ class MainActivity : AppCompatActivity() {
             btnCustomView.setOnClickListener {
                 navigateToCustomViewActivity()
             }
+
+            btnImageClassification.setOnClickListener {
+                navigateToImageClassification()
+            }
         }
     }
 
     private fun navigateToCustomViewActivity() {
         startActivity(Intent(this, CustomViewActivity::class.java))
+    }
+
+    private fun navigateToImageClassification() {
+        startActivity(Intent(this, ImageClassificationActivity::class.java))
     }
 }

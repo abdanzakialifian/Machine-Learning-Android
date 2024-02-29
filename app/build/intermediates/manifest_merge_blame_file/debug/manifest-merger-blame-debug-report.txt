@@ -1,0 +1,201 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.learn.machinelearningandroid"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="23"
+9        android:targetSdkVersion="34" />
+10
+11    <uses-feature android:name="android.hardware.camera" />
+11-->/Users/asani/Documents/AndroidProject/MachineLearningAndroid/app/src/main/AndroidManifest.xml:5:5-60
+11-->/Users/asani/Documents/AndroidProject/MachineLearningAndroid/app/src/main/AndroidManifest.xml:5:19-57
+12
+13    <uses-permission android:name="android.permission.CAMERA" />
+13-->/Users/asani/Documents/AndroidProject/MachineLearningAndroid/app/src/main/AndroidManifest.xml:6:5-65
+13-->/Users/asani/Documents/AndroidProject/MachineLearningAndroid/app/src/main/AndroidManifest.xml:6:22-62
+14    <uses-permission
+14-->/Users/asani/Documents/AndroidProject/MachineLearningAndroid/app/src/main/AndroidManifest.xml:7:5-8:38
+15        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+15-->/Users/asani/Documents/AndroidProject/MachineLearningAndroid/app/src/main/AndroidManifest.xml:7:22-78
+16        android:maxSdkVersion="28" />
+16-->/Users/asani/Documents/AndroidProject/MachineLearningAndroid/app/src/main/AndroidManifest.xml:8:9-35
+17    <uses-permission android:name="android.permission.INTERNET" />
+17-->/Users/asani/Documents/AndroidProject/MachineLearningAndroid/app/src/main/AndroidManifest.xml:9:5-66
+17-->/Users/asani/Documents/AndroidProject/MachineLearningAndroid/app/src/main/AndroidManifest.xml:9:22-64
+18
+19    <permission
+19-->[androidx.core:core:1.12.0] /Users/asani/.gradle/caches/transforms-3/d1e4a685b1001794fbcfe4ee9c157a7e/transformed/core-1.12.0/AndroidManifest.xml:22:5-24:47
+20        android:name="com.learn.machinelearningandroid.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+20-->[androidx.core:core:1.12.0] /Users/asani/.gradle/caches/transforms-3/d1e4a685b1001794fbcfe4ee9c157a7e/transformed/core-1.12.0/AndroidManifest.xml:23:9-81
+21        android:protectionLevel="signature" />
+21-->[androidx.core:core:1.12.0] /Users/asani/.gradle/caches/transforms-3/d1e4a685b1001794fbcfe4ee9c157a7e/transformed/core-1.12.0/AndroidManifest.xml:24:9-44
+22
+23    <uses-permission android:name="com.learn.machinelearningandroid.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+23-->[androidx.core:core:1.12.0] /Users/asani/.gradle/caches/transforms-3/d1e4a685b1001794fbcfe4ee9c157a7e/transformed/core-1.12.0/AndroidManifest.xml:26:5-97
+23-->[androidx.core:core:1.12.0] /Users/asani/.gradle/caches/transforms-3/d1e4a685b1001794fbcfe4ee9c157a7e/transformed/core-1.12.0/AndroidManifest.xml:26:22-94
+24
+25    <application
+25-->/Users/asani/Documents/AndroidProject/MachineLearningAndroid/app/src/main/AndroidManifest.xml:11:5-48:19
+26        android:allowBackup="true"
+26-->/Users/asani/Documents/AndroidProject/MachineLearningAndroid/app/src/main/AndroidManifest.xml:12:9-35
+27        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+27-->[androidx.core:core:1.12.0] /Users/asani/.gradle/caches/transforms-3/d1e4a685b1001794fbcfe4ee9c157a7e/transformed/core-1.12.0/AndroidManifest.xml:28:18-86
+28        android:dataExtractionRules="@xml/data_extraction_rules"
+28-->/Users/asani/Documents/AndroidProject/MachineLearningAndroid/app/src/main/AndroidManifest.xml:13:9-65
+29        android:debuggable="true"
+30        android:extractNativeLibs="false"
+31        android:fullBackupContent="@xml/backup_rules"
+31-->/Users/asani/Documents/AndroidProject/MachineLearningAndroid/app/src/main/AndroidManifest.xml:14:9-54
+32        android:icon="@mipmap/ic_launcher"
+32-->/Users/asani/Documents/AndroidProject/MachineLearningAndroid/app/src/main/AndroidManifest.xml:15:9-43
+33        android:label="@string/app_name"
+33-->/Users/asani/Documents/AndroidProject/MachineLearningAndroid/app/src/main/AndroidManifest.xml:16:9-41
+34        android:roundIcon="@mipmap/ic_launcher_round"
+34-->/Users/asani/Documents/AndroidProject/MachineLearningAndroid/app/src/main/AndroidManifest.xml:17:9-54
+35        android:supportsRtl="true"
+35-->/Users/asani/Documents/AndroidProject/MachineLearningAndroid/app/src/main/AndroidManifest.xml:18:9-35
+36        android:testOnly="true"
+37        android:theme="@style/Theme.MachineLearningAndroid" >
+37-->/Users/asani/Documents/AndroidProject/MachineLearningAndroid/app/src/main/AndroidManifest.xml:19:9-60
+38        <activity
+38-->/Users/asani/Documents/AndroidProject/MachineLearningAndroid/app/src/main/AndroidManifest.xml:21:9-23:40
+39            android:name="com.learn.machinelearningandroid.imageclassification.ImageClassificationActivity"
+39-->/Users/asani/Documents/AndroidProject/MachineLearningAndroid/app/src/main/AndroidManifest.xml:22:13-76
+40            android:exported="false" />
+40-->/Users/asani/Documents/AndroidProject/MachineLearningAndroid/app/src/main/AndroidManifest.xml:23:13-37
+41        <activity
+41-->/Users/asani/Documents/AndroidProject/MachineLearningAndroid/app/src/main/AndroidManifest.xml:24:9-26:40
+42            android:name="com.learn.machinelearningandroid.imageclassification.CameraActivity"
+42-->/Users/asani/Documents/AndroidProject/MachineLearningAndroid/app/src/main/AndroidManifest.xml:25:13-63
+43            android:exported="false" />
+43-->/Users/asani/Documents/AndroidProject/MachineLearningAndroid/app/src/main/AndroidManifest.xml:26:13-37
+44        <activity
+44-->/Users/asani/Documents/AndroidProject/MachineLearningAndroid/app/src/main/AndroidManifest.xml:27:9-29:40
+45            android:name="com.learn.machinelearningandroid.customview.CustomViewActivity"
+45-->/Users/asani/Documents/AndroidProject/MachineLearningAndroid/app/src/main/AndroidManifest.xml:28:13-58
+46            android:exported="false" />
+46-->/Users/asani/Documents/AndroidProject/MachineLearningAndroid/app/src/main/AndroidManifest.xml:29:13-37
+47        <activity
+47-->/Users/asani/Documents/AndroidProject/MachineLearningAndroid/app/src/main/AndroidManifest.xml:30:9-38:20
+48            android:name="com.learn.machinelearningandroid.main.MainActivity"
+48-->/Users/asani/Documents/AndroidProject/MachineLearningAndroid/app/src/main/AndroidManifest.xml:31:13-46
+49            android:exported="true" >
+49-->/Users/asani/Documents/AndroidProject/MachineLearningAndroid/app/src/main/AndroidManifest.xml:32:13-36
+50            <intent-filter>
+50-->/Users/asani/Documents/AndroidProject/MachineLearningAndroid/app/src/main/AndroidManifest.xml:33:13-37:29
+51                <action android:name="android.intent.action.MAIN" />
+51-->/Users/asani/Documents/AndroidProject/MachineLearningAndroid/app/src/main/AndroidManifest.xml:34:17-69
+51-->/Users/asani/Documents/AndroidProject/MachineLearningAndroid/app/src/main/AndroidManifest.xml:34:25-66
+52
+53                <category android:name="android.intent.category.LAUNCHER" />
+53-->/Users/asani/Documents/AndroidProject/MachineLearningAndroid/app/src/main/AndroidManifest.xml:36:17-77
+53-->/Users/asani/Documents/AndroidProject/MachineLearningAndroid/app/src/main/AndroidManifest.xml:36:27-74
+54            </intent-filter>
+55        </activity>
+56
+57        <provider
+58            android:name="androidx.core.content.FileProvider"
+58-->/Users/asani/Documents/AndroidProject/MachineLearningAndroid/app/src/main/AndroidManifest.xml:40:13-62
+59            android:authorities="com.learn.machinelearningandroid.fileprovider"
+59-->/Users/asani/Documents/AndroidProject/MachineLearningAndroid/app/src/main/AndroidManifest.xml:41:13-64
+60            android:exported="false"
+60-->/Users/asani/Documents/AndroidProject/MachineLearningAndroid/app/src/main/AndroidManifest.xml:42:13-37
+61            android:grantUriPermissions="true" >
+61-->/Users/asani/Documents/AndroidProject/MachineLearningAndroid/app/src/main/AndroidManifest.xml:43:13-47
+62            <meta-data
+62-->/Users/asani/Documents/AndroidProject/MachineLearningAndroid/app/src/main/AndroidManifest.xml:44:13-46:53
+63                android:name="android.support.FILE_PROVIDER_PATHS"
+63-->/Users/asani/Documents/AndroidProject/MachineLearningAndroid/app/src/main/AndroidManifest.xml:45:17-67
+64                android:resource="@xml/file_paths" />
+64-->/Users/asani/Documents/AndroidProject/MachineLearningAndroid/app/src/main/AndroidManifest.xml:46:17-51
+65        </provider>
+66        <!--
+67        Service for holding metadata. Cannot be instantiated.
+68        Metadata will be merged from other manifests.
+69        -->
+70        <service
+70-->[androidx.camera:camera-core:1.3.1] /Users/asani/.gradle/caches/transforms-3/ad54d4c81fdea81c3ee383df4c4b05e8/transformed/camera-core-1.3.1/AndroidManifest.xml:29:9-33:78
+71            android:name="androidx.camera.core.impl.MetadataHolderService"
+71-->[androidx.camera:camera-core:1.3.1] /Users/asani/.gradle/caches/transforms-3/ad54d4c81fdea81c3ee383df4c4b05e8/transformed/camera-core-1.3.1/AndroidManifest.xml:30:13-75
+72            android:enabled="false"
+72-->[androidx.camera:camera-core:1.3.1] /Users/asani/.gradle/caches/transforms-3/ad54d4c81fdea81c3ee383df4c4b05e8/transformed/camera-core-1.3.1/AndroidManifest.xml:31:13-36
+73            android:exported="false" >
+73-->[androidx.camera:camera-core:1.3.1] /Users/asani/.gradle/caches/transforms-3/ad54d4c81fdea81c3ee383df4c4b05e8/transformed/camera-core-1.3.1/AndroidManifest.xml:32:13-37
+74            <meta-data
+74-->[androidx.camera:camera-camera2:1.3.1] /Users/asani/.gradle/caches/transforms-3/22059243c106214a161609ed2fc0f504/transformed/camera-camera2-1.3.1/AndroidManifest.xml:30:13-32:89
+75                android:name="androidx.camera.core.impl.MetadataHolderService.DEFAULT_CONFIG_PROVIDER"
+75-->[androidx.camera:camera-camera2:1.3.1] /Users/asani/.gradle/caches/transforms-3/22059243c106214a161609ed2fc0f504/transformed/camera-camera2-1.3.1/AndroidManifest.xml:31:17-103
+76                android:value="androidx.camera.camera2.Camera2Config$DefaultProvider" />
+76-->[androidx.camera:camera-camera2:1.3.1] /Users/asani/.gradle/caches/transforms-3/22059243c106214a161609ed2fc0f504/transformed/camera-camera2-1.3.1/AndroidManifest.xml:32:17-86
+77        </service>
+78
+79        <provider
+79-->[androidx.emoji2:emoji2:1.2.0] /Users/asani/.gradle/caches/transforms-3/9dba3473c2e7ab91e493b9371a42d8d3/transformed/emoji2-1.2.0/AndroidManifest.xml:24:9-32:20
+80            android:name="androidx.startup.InitializationProvider"
+80-->[androidx.emoji2:emoji2:1.2.0] /Users/asani/.gradle/caches/transforms-3/9dba3473c2e7ab91e493b9371a42d8d3/transformed/emoji2-1.2.0/AndroidManifest.xml:25:13-67
+81            android:authorities="com.learn.machinelearningandroid.androidx-startup"
+81-->[androidx.emoji2:emoji2:1.2.0] /Users/asani/.gradle/caches/transforms-3/9dba3473c2e7ab91e493b9371a42d8d3/transformed/emoji2-1.2.0/AndroidManifest.xml:26:13-68
+82            android:exported="false" >
+82-->[androidx.emoji2:emoji2:1.2.0] /Users/asani/.gradle/caches/transforms-3/9dba3473c2e7ab91e493b9371a42d8d3/transformed/emoji2-1.2.0/AndroidManifest.xml:27:13-37
+83            <meta-data
+83-->[androidx.emoji2:emoji2:1.2.0] /Users/asani/.gradle/caches/transforms-3/9dba3473c2e7ab91e493b9371a42d8d3/transformed/emoji2-1.2.0/AndroidManifest.xml:29:13-31:52
+84                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+84-->[androidx.emoji2:emoji2:1.2.0] /Users/asani/.gradle/caches/transforms-3/9dba3473c2e7ab91e493b9371a42d8d3/transformed/emoji2-1.2.0/AndroidManifest.xml:30:17-75
+85                android:value="androidx.startup" />
+85-->[androidx.emoji2:emoji2:1.2.0] /Users/asani/.gradle/caches/transforms-3/9dba3473c2e7ab91e493b9371a42d8d3/transformed/emoji2-1.2.0/AndroidManifest.xml:31:17-49
+86            <meta-data
+86-->[androidx.lifecycle:lifecycle-process:2.7.0] /Users/asani/.gradle/caches/transforms-3/4c2924f70e8c04987f83fcfd1bb151d3/transformed/lifecycle-process-2.7.0/AndroidManifest.xml:29:13-31:52
+87                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+87-->[androidx.lifecycle:lifecycle-process:2.7.0] /Users/asani/.gradle/caches/transforms-3/4c2924f70e8c04987f83fcfd1bb151d3/transformed/lifecycle-process-2.7.0/AndroidManifest.xml:30:17-78
+88                android:value="androidx.startup" />
+88-->[androidx.lifecycle:lifecycle-process:2.7.0] /Users/asani/.gradle/caches/transforms-3/4c2924f70e8c04987f83fcfd1bb151d3/transformed/lifecycle-process-2.7.0/AndroidManifest.xml:31:17-49
+89            <meta-data
+89-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/asani/.gradle/caches/transforms-3/ee77c6148e535550acd02ec4a55fcb7f/transformed/profileinstaller-1.3.0/AndroidManifest.xml:29:13-31:52
+90                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+90-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/asani/.gradle/caches/transforms-3/ee77c6148e535550acd02ec4a55fcb7f/transformed/profileinstaller-1.3.0/AndroidManifest.xml:30:17-85
+91                android:value="androidx.startup" />
+91-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/asani/.gradle/caches/transforms-3/ee77c6148e535550acd02ec4a55fcb7f/transformed/profileinstaller-1.3.0/AndroidManifest.xml:31:17-49
+92        </provider>
+93
+94        <receiver
+94-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/asani/.gradle/caches/transforms-3/ee77c6148e535550acd02ec4a55fcb7f/transformed/profileinstaller-1.3.0/AndroidManifest.xml:34:9-52:20
+95            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+95-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/asani/.gradle/caches/transforms-3/ee77c6148e535550acd02ec4a55fcb7f/transformed/profileinstaller-1.3.0/AndroidManifest.xml:35:13-76
+96            android:directBootAware="false"
+96-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/asani/.gradle/caches/transforms-3/ee77c6148e535550acd02ec4a55fcb7f/transformed/profileinstaller-1.3.0/AndroidManifest.xml:36:13-44
+97            android:enabled="true"
+97-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/asani/.gradle/caches/transforms-3/ee77c6148e535550acd02ec4a55fcb7f/transformed/profileinstaller-1.3.0/AndroidManifest.xml:37:13-35
+98            android:exported="true"
+98-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/asani/.gradle/caches/transforms-3/ee77c6148e535550acd02ec4a55fcb7f/transformed/profileinstaller-1.3.0/AndroidManifest.xml:38:13-36
+99            android:permission="android.permission.DUMP" >
+99-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/asani/.gradle/caches/transforms-3/ee77c6148e535550acd02ec4a55fcb7f/transformed/profileinstaller-1.3.0/AndroidManifest.xml:39:13-57
+100            <intent-filter>
+100-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/asani/.gradle/caches/transforms-3/ee77c6148e535550acd02ec4a55fcb7f/transformed/profileinstaller-1.3.0/AndroidManifest.xml:40:13-42:29
+101                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+101-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/asani/.gradle/caches/transforms-3/ee77c6148e535550acd02ec4a55fcb7f/transformed/profileinstaller-1.3.0/AndroidManifest.xml:41:17-91
+101-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/asani/.gradle/caches/transforms-3/ee77c6148e535550acd02ec4a55fcb7f/transformed/profileinstaller-1.3.0/AndroidManifest.xml:41:25-88
+102            </intent-filter>
+103            <intent-filter>
+103-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/asani/.gradle/caches/transforms-3/ee77c6148e535550acd02ec4a55fcb7f/transformed/profileinstaller-1.3.0/AndroidManifest.xml:43:13-45:29
+104                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+104-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/asani/.gradle/caches/transforms-3/ee77c6148e535550acd02ec4a55fcb7f/transformed/profileinstaller-1.3.0/AndroidManifest.xml:44:17-85
+104-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/asani/.gradle/caches/transforms-3/ee77c6148e535550acd02ec4a55fcb7f/transformed/profileinstaller-1.3.0/AndroidManifest.xml:44:25-82
+105            </intent-filter>
+106            <intent-filter>
+106-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/asani/.gradle/caches/transforms-3/ee77c6148e535550acd02ec4a55fcb7f/transformed/profileinstaller-1.3.0/AndroidManifest.xml:46:13-48:29
+107                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+107-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/asani/.gradle/caches/transforms-3/ee77c6148e535550acd02ec4a55fcb7f/transformed/profileinstaller-1.3.0/AndroidManifest.xml:47:17-88
+107-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/asani/.gradle/caches/transforms-3/ee77c6148e535550acd02ec4a55fcb7f/transformed/profileinstaller-1.3.0/AndroidManifest.xml:47:25-85
+108            </intent-filter>
+109            <intent-filter>
+109-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/asani/.gradle/caches/transforms-3/ee77c6148e535550acd02ec4a55fcb7f/transformed/profileinstaller-1.3.0/AndroidManifest.xml:49:13-51:29
+110                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+110-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/asani/.gradle/caches/transforms-3/ee77c6148e535550acd02ec4a55fcb7f/transformed/profileinstaller-1.3.0/AndroidManifest.xml:50:17-95
+110-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/asani/.gradle/caches/transforms-3/ee77c6148e535550acd02ec4a55fcb7f/transformed/profileinstaller-1.3.0/AndroidManifest.xml:50:25-92
+111            </intent-filter>
+112        </receiver>
+113    </application>
+114
+115</manifest>
