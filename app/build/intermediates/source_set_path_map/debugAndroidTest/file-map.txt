@@ -1,0 +1,6 @@
+com.learn.machinelearningandroid.test.app-annotation-experimental-1.3.1-0 /Users/abdanzakialifian/.gradle/caches/transforms-3/244ab9ef5ba822af240c849bd10c466a/transformed/annotation-experimental-1.3.1/res
+com.learn.machinelearningandroid.test.app-core-1.5.0-1 /Users/abdanzakialifian/.gradle/caches/transforms-3/a398584d6b5cd441ab396e8538531035/transformed/core-1.5.0/res
+com.learn.machinelearningandroid.test.app-androidTest-2 /Users/abdanzakialifian/Projects/Android Project/Machine-Learning-Android/app/build/generated/res/resValues/androidTest/debug
+com.learn.machinelearningandroid.test.app-mergeDebugAndroidTestResources-3 /Users/abdanzakialifian/Projects/Android Project/Machine-Learning-Android/app/build/intermediates/incremental/debugAndroidTest/mergeDebugAndroidTestResources/merged.dir
+com.learn.machinelearningandroid.test.app-mergeDebugAndroidTestResources-4 /Users/abdanzakialifian/Projects/Android Project/Machine-Learning-Android/app/build/intermediates/incremental/debugAndroidTest/mergeDebugAndroidTestResources/stripped.dir
+com.learn.machinelearningandroid.test.app-merged_res-5 /Users/abdanzakialifian/Projects/Android Project/Machine-Learning-Android/app/build/intermediates/merged_res/debugAndroidTest

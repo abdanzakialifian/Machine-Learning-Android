@@ -3621,6 +3621,8 @@ id transition_layout_save
 id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
+id translateButton
+id translated_text
 id triangle
 id unchecked
 id uniform
@@ -3851,6 +3853,7 @@ layout support_simple_spinner_dropdown_item
 mipmap ic_launcher
 mipmap ic_launcher_round
 plurals mtrl_badge_content_description
+raw translate_models_metadata
 string abc_action_bar_home_description
 string abc_action_bar_up_description
 string abc_action_menu_overflow_description
@@ -3919,6 +3922,7 @@ string common_google_play_services_wear_update_text
 string common_open_on_phone
 string common_signin_button_text
 string common_signin_button_text_long
+string downloading_model_fail
 string empty_image_warning
 string error_a11y_label
 string error_icon_content_description
@@ -4043,6 +4047,7 @@ string searchview_navigation_content_description
 string side_sheet_accessibility_pane_title
 string side_sheet_behavior
 string status_bar_notification_info_overflow
+string translate
 string upload
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light
@@ -5321,3 +5326,4 @@ styleable include constraintSet
 xml backup_rules
 xml data_extraction_rules
 xml file_paths
+xml rapid_response_client_defaults

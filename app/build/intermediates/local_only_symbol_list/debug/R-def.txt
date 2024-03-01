@@ -25,6 +25,8 @@ id resultTextView
 id result_image
 id result_text
 id switchCamera
+id translateButton
+id translated_text
 id uploadButton
 id viewFinder
 layout activity_camera
@@ -39,10 +41,12 @@ string analyze
 string app_name
 string camera
 string camera_x
+string downloading_model_fail
 string empty_image_warning
 string gallery
 string no_text_recognized
 string result
+string translate
 string upload
 style Base.Theme.MachineLearningAndroid
 style Theme.MachineLearningAndroid

@@ -4,6 +4,7 @@ package com.learn.machinelearningandroid.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ScrollView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
@@ -11,6 +12,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.widget.AppCompatImageView;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
+import com.google.android.material.progressindicator.LinearProgressIndicator;
 import com.learn.machinelearningandroid.R;
 import java.lang.NullPointerException;
 import java.lang.Override;
@@ -21,16 +23,30 @@ public final class ActivityMlkitResultBinding implements ViewBinding {
   private final ScrollView rootView;
 
   @NonNull
+  public final LinearProgressIndicator progressIndicator;
+
+  @NonNull
   public final AppCompatImageView resultImage;
 
   @NonNull
   public final TextView resultText;
 
+  @NonNull
+  public final Button translateButton;
+
+  @NonNull
+  public final TextView translatedText;
+
   private ActivityMlkitResultBinding(@NonNull ScrollView rootView,
-      @NonNull AppCompatImageView resultImage, @NonNull TextView resultText) {
+      @NonNull LinearProgressIndicator progressIndicator, @NonNull AppCompatImageView resultImage,
+      @NonNull TextView resultText, @NonNull Button translateButton,
+      @NonNull TextView translatedText) {
     this.rootView = rootView;
+    this.progressIndicator = progressIndicator;
     this.resultImage = resultImage;
     this.resultText = resultText;
+    this.translateButton = translateButton;
+    this.translatedText = translatedText;
   }
 
   @Override
@@ -60,6 +76,12 @@ public final class ActivityMlkitResultBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.progressIndicator;
+      LinearProgressIndicator progressIndicator = ViewBindings.findChildViewById(rootView, id);
+      if (progressIndicator == null) {
+        break missingId;
+      }
+
       id = R.id.result_image;
       AppCompatImageView resultImage = ViewBindings.findChildViewById(rootView, id);
       if (resultImage == null) {
@@ -72,7 +94,20 @@ public final class ActivityMlkitResultBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityMlkitResultBinding((ScrollView) rootView, resultImage, resultText);
+      id = R.id.translateButton;
+      Button translateButton = ViewBindings.findChildViewById(rootView, id);
+      if (translateButton == null) {
+        break missingId;
+      }
+
+      id = R.id.translated_text;
+      TextView translatedText = ViewBindings.findChildViewById(rootView, id);
+      if (translatedText == null) {
+        break missingId;
+      }
+
+      return new ActivityMlkitResultBinding((ScrollView) rootView, progressIndicator, resultImage,
+          resultText, translateButton, translatedText);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

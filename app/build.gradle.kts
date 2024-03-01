@@ -42,8 +42,9 @@ android {
 dependencies {
     val cameraxVersion = "1.3.1"
     val retrofit2 = "2.9.0"
-    val okhttp = "4.11.0"
+    val okhttp = "4.12.0"
     val mlkitTextRecognition = "16.0.0"
+    val mlkitTranslation = "17.0.2"
 
     implementation("androidx.core:core-ktx:1.12.0")
     implementation("androidx.appcompat:appcompat:1.6.1")
@@ -63,4 +64,5 @@ dependencies {
     implementation("com.squareup.okhttp3:logging-interceptor:$okhttp")
 
     implementation("com.google.mlkit:text-recognition:$mlkitTextRecognition")
+    implementation("com.google.mlkit:translate:$mlkitTranslation")
 }
