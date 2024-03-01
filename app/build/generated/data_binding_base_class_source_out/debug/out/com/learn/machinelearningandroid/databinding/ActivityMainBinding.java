@@ -25,11 +25,15 @@ public final class ActivityMainBinding implements ViewBinding {
   @NonNull
   public final Button btnImageClassification;
 
+  @NonNull
+  public final Button btnMlkitTextRecognition;
+
   private ActivityMainBinding(@NonNull LinearLayout rootView, @NonNull Button btnCustomView,
-      @NonNull Button btnImageClassification) {
+      @NonNull Button btnImageClassification, @NonNull Button btnMlkitTextRecognition) {
     this.rootView = rootView;
     this.btnCustomView = btnCustomView;
     this.btnImageClassification = btnImageClassification;
+    this.btnMlkitTextRecognition = btnMlkitTextRecognition;
   }
 
   @Override
@@ -71,8 +75,14 @@ public final class ActivityMainBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityMainBinding((LinearLayout) rootView, btnCustomView,
-          btnImageClassification);
+      id = R.id.btn_mlkit_text_recognition;
+      Button btnMlkitTextRecognition = ViewBindings.findChildViewById(rootView, id);
+      if (btnMlkitTextRecognition == null) {
+        break missingId;
+      }
+
+      return new ActivityMainBinding((LinearLayout) rootView, btnCustomView, btnImageClassification,
+          btnMlkitTextRecognition);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

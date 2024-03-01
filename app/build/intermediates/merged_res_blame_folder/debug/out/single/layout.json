@@ -1,18 +1,26 @@
 [
     {
-        "merged": "com.learn.machinelearningandroid.app-mergeDebugResources-37:/layout/activity_main.xml",
-        "source": "com.learn.machinelearningandroid.app-main-40:/layout/activity_main.xml"
+        "merged": "com.learn.machinelearningandroid.app-mergeDebugResources-39:/layout/activity_mlkit_result.xml",
+        "source": "com.learn.machinelearningandroid.app-main-42:/layout/activity_mlkit_result.xml"
     },
     {
-        "merged": "com.learn.machinelearningandroid.app-mergeDebugResources-37:/layout/activity_image_classification.xml",
-        "source": "com.learn.machinelearningandroid.app-main-40:/layout/activity_image_classification.xml"
+        "merged": "com.learn.machinelearningandroid.app-mergeDebugResources-39:/layout/activity_mlkit_text_recognition.xml",
+        "source": "com.learn.machinelearningandroid.app-main-42:/layout/activity_mlkit_text_recognition.xml"
     },
     {
-        "merged": "com.learn.machinelearningandroid.app-mergeDebugResources-37:/layout/activity_camera.xml",
-        "source": "com.learn.machinelearningandroid.app-main-40:/layout/activity_camera.xml"
+        "merged": "com.learn.machinelearningandroid.app-mergeDebugResources-39:/layout/activity_custom_view.xml",
+        "source": "com.learn.machinelearningandroid.app-main-42:/layout/activity_custom_view.xml"
     },
     {
-        "merged": "com.learn.machinelearningandroid.app-mergeDebugResources-37:/layout/activity_custom_view.xml",
-        "source": "com.learn.machinelearningandroid.app-main-40:/layout/activity_custom_view.xml"
+        "merged": "com.learn.machinelearningandroid.app-mergeDebugResources-39:/layout/activity_main.xml",
+        "source": "com.learn.machinelearningandroid.app-main-42:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.learn.machinelearningandroid.app-mergeDebugResources-39:/layout/activity_image_classification.xml",
+        "source": "com.learn.machinelearningandroid.app-main-42:/layout/activity_image_classification.xml"
+    },
+    {
+        "merged": "com.learn.machinelearningandroid.app-mergeDebugResources-39:/layout/activity_camera.xml",
+        "source": "com.learn.machinelearningandroid.app-main-42:/layout/activity_camera.xml"
     }
 ]

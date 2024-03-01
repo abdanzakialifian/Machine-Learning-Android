@@ -19,6 +19,12 @@
         android:theme="@style/Theme.MachineLearningAndroid"
         tools:targetApi="31" >
         <activity
+            android:name=".mlkit.MLKitResultActivity"
+            android:exported="false" />
+        <activity
+            android:name=".mlkit.MLKitTextRecognitionActivity"
+            android:exported="false" />
+        <activity
             android:name=".imageclassification.ImageClassificationActivity"
             android:exported="false" />
         <activity

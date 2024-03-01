@@ -1,11 +1,12 @@
 package com.learn.machinelearningandroid.main
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import com.learn.machinelearningandroid.customview.CustomViewActivity
 import com.learn.machinelearningandroid.databinding.ActivityMainBinding
 import com.learn.machinelearningandroid.imageclassification.ImageClassificationActivity
+import com.learn.machinelearningandroid.mlkit.MLKitTextRecognitionActivity
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -27,6 +28,10 @@ class MainActivity : AppCompatActivity() {
             btnImageClassification.setOnClickListener {
                 navigateToImageClassification()
             }
+
+            btnMlkitTextRecognition.setOnClickListener {
+                navigateToMLKitTextRecognition()
+            }
         }
     }
 
@@ -36,5 +41,9 @@ class MainActivity : AppCompatActivity() {
 
     private fun navigateToImageClassification() {
         startActivity(Intent(this, ImageClassificationActivity::class.java))
+    }
+
+    private fun navigateToMLKitTextRecognition() {
+        startActivity(Intent(this, MLKitTextRecognitionActivity::class.java))
     }
 }
