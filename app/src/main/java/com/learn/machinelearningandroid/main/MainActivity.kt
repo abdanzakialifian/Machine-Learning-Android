@@ -5,6 +5,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.learn.machinelearningandroid.customview.CustomViewActivity
 import com.learn.machinelearningandroid.databinding.ActivityMainBinding
+import com.learn.machinelearningandroid.camera.CameraActivity
 import com.learn.machinelearningandroid.imageclassification.ImageClassificationActivity
 import com.learn.machinelearningandroid.mlkit.MLKitRecognitionActivity
 
@@ -29,8 +30,12 @@ class MainActivity : AppCompatActivity() {
                 navigateToImageClassification()
             }
 
-            btnMlkitTextRecognition.setOnClickListener {
+            btnMlkitRecognition.setOnClickListener {
                 navigateToMLKitTextRecognition()
+            }
+
+            btnTflite.setOnClickListener {
+                navigateToCamera()
             }
         }
     }
@@ -45,5 +50,12 @@ class MainActivity : AppCompatActivity() {
 
     private fun navigateToMLKitTextRecognition() {
         startActivity(Intent(this, MLKitRecognitionActivity::class.java))
+    }
+
+    private fun navigateToCamera() {
+        Intent(this, CameraActivity::class.java).apply {
+            putExtra(CameraActivity.CAMERA_TYPE_KEY, CameraActivity.IMAGE_CLASSIFICATION)
+            startActivity(this)
+        }
     }
 }

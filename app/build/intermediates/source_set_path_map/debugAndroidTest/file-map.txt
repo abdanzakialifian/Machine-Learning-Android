@@ -1,5 +1,5 @@
-com.learn.machinelearningandroid.test.app-annotation-experimental-1.3.1-0 /Users/abdanzakialifian/.gradle/caches/transforms-3/244ab9ef5ba822af240c849bd10c466a/transformed/annotation-experimental-1.3.1/res
-com.learn.machinelearningandroid.test.app-core-1.5.0-1 /Users/abdanzakialifian/.gradle/caches/transforms-3/a398584d6b5cd441ab396e8538531035/transformed/core-1.5.0/res
+com.learn.machinelearningandroid.test.app-jetified-annotation-experimental-1.4.0-0 /Users/abdanzakialifian/.gradle/caches/transforms-3/dca05a36f2a638df71ffd135d78016c6/transformed/jetified-annotation-experimental-1.4.0/res
+com.learn.machinelearningandroid.test.app-jetified-core-1.5.0-1 /Users/abdanzakialifian/.gradle/caches/transforms-3/f5f91ed00ccec702389e5a3c7aff68f1/transformed/jetified-core-1.5.0/res
 com.learn.machinelearningandroid.test.app-androidTest-2 /Users/abdanzakialifian/Projects/Android Project/Machine-Learning-Android/app/build/generated/res/resValues/androidTest/debug
 com.learn.machinelearningandroid.test.app-mergeDebugAndroidTestResources-3 /Users/abdanzakialifian/Projects/Android Project/Machine-Learning-Android/app/build/intermediates/incremental/debugAndroidTest/mergeDebugAndroidTestResources/merged.dir
 com.learn.machinelearningandroid.test.app-mergeDebugAndroidTestResources-4 /Users/abdanzakialifian/Projects/Android Project/Machine-Learning-Android/app/build/intermediates/incremental/debugAndroidTest/mergeDebugAndroidTestResources/stripped.dir

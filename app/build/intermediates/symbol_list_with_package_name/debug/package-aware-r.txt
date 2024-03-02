@@ -3227,7 +3227,8 @@ id bounceEnd
 id bounceStart
 id btn_custom_view
 id btn_image_classification
-id btn_mlkit_text_recognition
+id btn_mlkit_recognition
+id btn_tflite
 id buttonPanel
 id cache_measures
 id callMeasure
@@ -3624,6 +3625,8 @@ id transition_transform
 id translateButton
 id translated_text
 id triangle
+id tvInferenceTime
+id tvResult
 id unchecked
 id uniform
 id unlabeled
@@ -3932,6 +3935,7 @@ string fab_transformation_sheet_behavior
 string gallery
 string hide_bottom_view_on_scroll_behavior
 string icon_content_description
+string image_classifier_failed
 string item_view_role_description
 string m3_exceed_max_badge_text_suffix
 string m3_ref_typeface_brand_medium

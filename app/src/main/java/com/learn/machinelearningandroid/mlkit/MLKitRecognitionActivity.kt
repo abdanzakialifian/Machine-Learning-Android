@@ -18,8 +18,8 @@ import com.google.mlkit.vision.text.TextRecognition
 import com.google.mlkit.vision.text.latin.TextRecognizerOptions
 import com.learn.machinelearningandroid.R
 import com.learn.machinelearningandroid.databinding.ActivityMlkitRecognitionBinding
-import com.learn.machinelearningandroid.imageclassification.CameraActivity
-import com.learn.machinelearningandroid.imageclassification.CameraActivity.Companion.CAMERAX_RESULT
+import com.learn.machinelearningandroid.camera.CameraActivity
+import com.learn.machinelearningandroid.camera.CameraActivity.Companion.CAMERAX_RESULT
 import com.learn.machinelearningandroid.utils.getImageUri
 
 class MLKitRecognitionActivity : AppCompatActivity() {

@@ -15,8 +15,9 @@ import androidx.core.net.toUri
 import androidx.core.view.isVisible
 import androidx.lifecycle.ViewModelProvider
 import com.learn.machinelearningandroid.R
+import com.learn.machinelearningandroid.camera.CameraActivity
 import com.learn.machinelearningandroid.databinding.ActivityImageClassificationBinding
-import com.learn.machinelearningandroid.imageclassification.CameraActivity.Companion.CAMERAX_RESULT
+import com.learn.machinelearningandroid.camera.CameraActivity.Companion.CAMERAX_RESULT
 import com.learn.machinelearningandroid.utils.getImageUri
 import com.learn.machinelearningandroid.utils.reduceImageFile
 import com.learn.machinelearningandroid.utils.uriToFile

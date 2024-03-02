@@ -4,6 +4,7 @@ package com.learn.machinelearningandroid.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.AppCompatImageView;
@@ -27,14 +28,23 @@ public final class ActivityCameraBinding implements ViewBinding {
   public final AppCompatImageView switchCamera;
 
   @NonNull
+  public final TextView tvInferenceTime;
+
+  @NonNull
+  public final TextView tvResult;
+
+  @NonNull
   public final PreviewView viewFinder;
 
   private ActivityCameraBinding(@NonNull ConstraintLayout rootView,
       @NonNull AppCompatImageView captureImage, @NonNull AppCompatImageView switchCamera,
+      @NonNull TextView tvInferenceTime, @NonNull TextView tvResult,
       @NonNull PreviewView viewFinder) {
     this.rootView = rootView;
     this.captureImage = captureImage;
     this.switchCamera = switchCamera;
+    this.tvInferenceTime = tvInferenceTime;
+    this.tvResult = tvResult;
     this.viewFinder = viewFinder;
   }
 
@@ -77,6 +87,18 @@ public final class ActivityCameraBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.tvInferenceTime;
+      TextView tvInferenceTime = ViewBindings.findChildViewById(rootView, id);
+      if (tvInferenceTime == null) {
+        break missingId;
+      }
+
+      id = R.id.tvResult;
+      TextView tvResult = ViewBindings.findChildViewById(rootView, id);
+      if (tvResult == null) {
+        break missingId;
+      }
+
       id = R.id.viewFinder;
       PreviewView viewFinder = ViewBindings.findChildViewById(rootView, id);
       if (viewFinder == null) {
@@ -84,7 +106,7 @@ public final class ActivityCameraBinding implements ViewBinding {
       }
 
       return new ActivityCameraBinding((ConstraintLayout) rootView, captureImage, switchCamera,
-          viewFinder);
+          tvInferenceTime, tvResult, viewFinder);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

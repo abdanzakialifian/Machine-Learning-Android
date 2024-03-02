@@ -24,16 +24,12 @@
         "source": "/Users/abdanzakialifian/.gradle/daemon/8.2/com.learn.machinelearningandroid.app-pngs-38:/drawable-anydpi-v24/ic_launcher_foreground.xml"
     },
     {
-        "merged": "/Users/abdanzakialifian/.gradle/daemon/8.2/com.learn.machinelearningandroid.app-merged_res-42:/layout_activity_mlkit_text_recognition.xml.flat",
-        "source": "/Users/abdanzakialifian/.gradle/daemon/8.2/com.learn.machinelearningandroid.app-main-44:/layout/activity_mlkit_text_recognition.xml"
+        "merged": "/Users/abdanzakialifian/.gradle/daemon/8.2/com.learn.machinelearningandroid.app-merged_res-42:/layout_activity_mlkit_recognition.xml.flat",
+        "source": "/Users/abdanzakialifian/.gradle/daemon/8.2/com.learn.machinelearningandroid.app-main-44:/layout/activity_mlkit_recognition.xml"
     },
     {
         "merged": "/Users/abdanzakialifian/.gradle/daemon/8.2/com.learn.machinelearningandroid.app-merged_res-42:/mipmap-mdpi_ic_launcher.webp.flat",
         "source": "/Users/abdanzakialifian/.gradle/daemon/8.2/com.learn.machinelearningandroid.app-main-44:/mipmap-mdpi/ic_launcher.webp"
-    },
-    {
-        "merged": "com.learn.machinelearningandroid.app-merged_res-42:/layout_activity_main.xml.flat",
-        "source": "com.learn.machinelearningandroid.app-main-44:/layout/activity_main.xml"
     },
     {
         "merged": "/Users/abdanzakialifian/.gradle/daemon/8.2/com.learn.machinelearningandroid.app-merged_res-42:/mipmap-anydpi-v26_ic_launcher.xml.flat",
@@ -46,6 +42,10 @@
     {
         "merged": "/Users/abdanzakialifian/.gradle/daemon/8.2/com.learn.machinelearningandroid.app-merged_res-42:/xml_data_extraction_rules.xml.flat",
         "source": "/Users/abdanzakialifian/.gradle/daemon/8.2/com.learn.machinelearningandroid.app-main-44:/xml/data_extraction_rules.xml"
+    },
+    {
+        "merged": "com.learn.machinelearningandroid.app-merged_res-42:/layout_activity_camera.xml.flat",
+        "source": "com.learn.machinelearningandroid.app-main-44:/layout/activity_camera.xml"
     },
     {
         "merged": "/Users/abdanzakialifian/.gradle/daemon/8.2/com.learn.machinelearningandroid.app-merged_res-42:/xml_file_paths.xml.flat",
@@ -98,10 +98,6 @@
     {
         "merged": "/Users/abdanzakialifian/.gradle/daemon/8.2/com.learn.machinelearningandroid.app-merged_res-42:/mipmap-hdpi_ic_launcher_round.webp.flat",
         "source": "/Users/abdanzakialifian/.gradle/daemon/8.2/com.learn.machinelearningandroid.app-main-44:/mipmap-hdpi/ic_launcher_round.webp"
-    },
-    {
-        "merged": "com.learn.machinelearningandroid.app-merged_res-42:/layout_activity_mlkit_recognition.xml.flat",
-        "source": "com.learn.machinelearningandroid.app-main-44:/layout/activity_mlkit_recognition.xml"
     },
     {
         "merged": "/Users/abdanzakialifian/.gradle/daemon/8.2/com.learn.machinelearningandroid.app-merged_res-42:/layout_activity_custom_view.xml.flat",

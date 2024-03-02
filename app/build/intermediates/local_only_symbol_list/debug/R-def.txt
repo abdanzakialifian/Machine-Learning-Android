@@ -13,7 +13,8 @@ drawable ic_switch_camera
 id analyzeButton
 id btn_custom_view
 id btn_image_classification
-id btn_mlkit_text_recognition
+id btn_mlkit_recognition
+id btn_tflite
 id cameraButton
 id cameraXButton
 id captureImage
@@ -27,6 +28,8 @@ id result_text
 id switchCamera
 id translateButton
 id translated_text
+id tvInferenceTime
+id tvResult
 id uploadButton
 id viewFinder
 layout activity_camera
@@ -44,6 +47,7 @@ string camera_x
 string downloading_model_fail
 string empty_image_warning
 string gallery
+string image_classifier_failed
 string no_text_recognized
 string result
 string translate

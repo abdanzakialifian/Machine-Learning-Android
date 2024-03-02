@@ -20,9 +20,15 @@
         android:text="Image Classification" />
 
     <Button
-        android:id="@+id/btn_mlkit_text_recognition"
+        android:id="@+id/btn_mlkit_recognition"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="ML Kit Recognition" />
+
+    <Button
+        android:id="@+id/btn_tflite"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TensorFlow Lite" />
 
 </LinearLayout>
