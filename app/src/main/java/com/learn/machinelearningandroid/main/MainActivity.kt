@@ -6,7 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.learn.machinelearningandroid.customview.CustomViewActivity
 import com.learn.machinelearningandroid.databinding.ActivityMainBinding
 import com.learn.machinelearningandroid.imageclassification.ImageClassificationActivity
-import com.learn.machinelearningandroid.mlkit.MLKitTextRecognitionActivity
+import com.learn.machinelearningandroid.mlkit.MLKitRecognitionActivity
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -44,6 +44,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun navigateToMLKitTextRecognition() {
-        startActivity(Intent(this, MLKitTextRecognitionActivity::class.java))
+        startActivity(Intent(this, MLKitRecognitionActivity::class.java))
     }
 }

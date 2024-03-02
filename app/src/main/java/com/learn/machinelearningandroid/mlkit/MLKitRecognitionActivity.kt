@@ -17,13 +17,13 @@ import com.google.mlkit.vision.common.InputImage
 import com.google.mlkit.vision.text.TextRecognition
 import com.google.mlkit.vision.text.latin.TextRecognizerOptions
 import com.learn.machinelearningandroid.R
-import com.learn.machinelearningandroid.databinding.ActivityMlkitTextRecognitionBinding
+import com.learn.machinelearningandroid.databinding.ActivityMlkitRecognitionBinding
 import com.learn.machinelearningandroid.imageclassification.CameraActivity
 import com.learn.machinelearningandroid.imageclassification.CameraActivity.Companion.CAMERAX_RESULT
 import com.learn.machinelearningandroid.utils.getImageUri
 
-class MLKitTextRecognitionActivity : AppCompatActivity() {
-    private lateinit var binding: ActivityMlkitTextRecognitionBinding
+class MLKitRecognitionActivity : AppCompatActivity() {
+    private lateinit var binding: ActivityMlkitRecognitionBinding
 
     private var currentImageUri: Uri? = null
 
@@ -46,7 +46,7 @@ class MLKitTextRecognitionActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityMlkitTextRecognitionBinding.inflate(layoutInflater)
+        binding = ActivityMlkitRecognitionBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         if (!allPermissionsGranted()) {
@@ -95,7 +95,7 @@ class MLKitTextRecognitionActivity : AppCompatActivity() {
 
     private fun startCameraX() {
         val intent = Intent(this, CameraActivity::class.java)
-        intent.putExtra(CameraActivity.ML_TYPE_KEY, CameraActivity.ML_KIT_VALUE)
+        intent.putExtra(CameraActivity.CAMERA_TYPE_KEY, CameraActivity.BARCODE_SCANNER)
         launcherIntentCameraX.launch(intent)
     }
 

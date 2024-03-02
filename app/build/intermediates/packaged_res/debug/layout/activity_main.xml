@@ -23,6 +23,6 @@
         android:id="@+id/btn_mlkit_text_recognition"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="ML Kit Text Recognition" />
+        android:text="ML Kit Recognition" />
 
 </LinearLayout>

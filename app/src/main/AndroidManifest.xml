@@ -22,7 +22,7 @@
             android:name=".mlkit.MLKitResultActivity"
             android:exported="false" />
         <activity
-            android:name=".mlkit.MLKitTextRecognitionActivity"
+            android:name=".mlkit.MLKitRecognitionActivity"
             android:exported="false" />
         <activity
             android:name=".imageclassification.ImageClassificationActivity"

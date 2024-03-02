@@ -70,8 +70,8 @@
 41-->/Users/abdanzakialifian/Projects/Android Project/Machine-Learning-Android/app/src/main/AndroidManifest.xml:23:13-37
 42        <activity
 42-->/Users/abdanzakialifian/Projects/Android Project/Machine-Learning-Android/app/src/main/AndroidManifest.xml:24:9-26:40
-43            android:name="com.learn.machinelearningandroid.mlkit.MLKitTextRecognitionActivity"
-43-->/Users/abdanzakialifian/Projects/Android Project/Machine-Learning-Android/app/src/main/AndroidManifest.xml:25:13-63
+43            android:name="com.learn.machinelearningandroid.mlkit.MLKitRecognitionActivity"
+43-->/Users/abdanzakialifian/Projects/Android Project/Machine-Learning-Android/app/src/main/AndroidManifest.xml:25:13-59
 44            android:exported="false" />
 44-->/Users/abdanzakialifian/Projects/Android Project/Machine-Learning-Android/app/src/main/AndroidManifest.xml:26:13-37
 45        <activity

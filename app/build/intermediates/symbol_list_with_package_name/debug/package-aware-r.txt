@@ -3769,8 +3769,8 @@ layout activity_camera
 layout activity_custom_view
 layout activity_image_classification
 layout activity_main
+layout activity_mlkit_recognition
 layout activity_mlkit_result
-layout activity_mlkit_text_recognition
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog

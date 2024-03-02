@@ -3768,8 +3768,8 @@ int layout activity_camera 0x7f0b001c
 int layout activity_custom_view 0x7f0b001d
 int layout activity_image_classification 0x7f0b001e
 int layout activity_main 0x7f0b001f
+int layout activity_mlkit_recognition 0x7f0b0071
 int layout activity_mlkit_result 0x7f0b0020
-int layout activity_mlkit_text_recognition 0x7f0b0021
 int layout custom_dialog 0x7f0b0022
 int layout design_bottom_navigation_item 0x7f0b0023
 int layout design_bottom_sheet_dialog 0x7f0b0024

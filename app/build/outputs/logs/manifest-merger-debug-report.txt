@@ -190,12 +190,12 @@ ADDED from /Users/abdanzakialifian/Projects/Android Project/Machine-Learning-And
 		ADDED from /Users/abdanzakialifian/Projects/Android Project/Machine-Learning-Android/app/src/main/AndroidManifest.xml:23:13-37
 	android:name
 		ADDED from /Users/abdanzakialifian/Projects/Android Project/Machine-Learning-Android/app/src/main/AndroidManifest.xml:22:13-54
-activity#com.learn.machinelearningandroid.mlkit.MLKitTextRecognitionActivity
+activity#com.learn.machinelearningandroid.mlkit.MLKitRecognitionActivity
 ADDED from /Users/abdanzakialifian/Projects/Android Project/Machine-Learning-Android/app/src/main/AndroidManifest.xml:24:9-26:40
 	android:exported
 		ADDED from /Users/abdanzakialifian/Projects/Android Project/Machine-Learning-Android/app/src/main/AndroidManifest.xml:26:13-37
 	android:name
-		ADDED from /Users/abdanzakialifian/Projects/Android Project/Machine-Learning-Android/app/src/main/AndroidManifest.xml:25:13-63
+		ADDED from /Users/abdanzakialifian/Projects/Android Project/Machine-Learning-Android/app/src/main/AndroidManifest.xml:25:13-59
 activity#com.learn.machinelearningandroid.imageclassification.ImageClassificationActivity
 ADDED from /Users/abdanzakialifian/Projects/Android Project/Machine-Learning-Android/app/src/main/AndroidManifest.xml:27:9-29:40
 	android:exported

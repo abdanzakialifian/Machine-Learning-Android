@@ -40,7 +40,7 @@
             android:name="com.learn.machinelearningandroid.mlkit.MLKitResultActivity"
             android:exported="false" />
         <activity
-            android:name="com.learn.machinelearningandroid.mlkit.MLKitTextRecognitionActivity"
+            android:name="com.learn.machinelearningandroid.mlkit.MLKitRecognitionActivity"
             android:exported="false" />
         <activity
             android:name="com.learn.machinelearningandroid.imageclassification.ImageClassificationActivity"

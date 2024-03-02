@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.util.Log
 import android.view.OrientationEventListener
 import android.view.Surface
+import android.view.View
 import android.view.WindowInsets
 import android.view.WindowManager
 import android.widget.Toast
@@ -34,7 +35,7 @@ class CameraActivity : AppCompatActivity() {
     private var imageCapture: ImageCapture? = null
     private lateinit var barcodeScanner: BarcodeScanner
     private var isFirstCall = true
-    private var machineLearningType: String? = null
+    private var cameraType: String? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -54,12 +55,12 @@ class CameraActivity : AppCompatActivity() {
     public override fun onResume() {
         super.onResume()
         hideSystemUI()
-        machineLearningType = intent.getStringExtra(ML_TYPE_KEY)
+        cameraType = intent.getStringExtra(CAMERA_TYPE_KEY)
         startCamera()
     }
 
     private fun startCamera() {
-        if (machineLearningType == ML_KIT_VALUE) {
+        if (cameraType == BARCODE_SCANNER) {
             val options =
                 BarcodeScannerOptions.Builder().setBarcodeFormats(Barcode.FORMAT_QR_CODE).build()
             barcodeScanner = BarcodeScanning.getClient(options)
@@ -78,7 +79,12 @@ class CameraActivity : AppCompatActivity() {
                 analyzer
             )
             cameraController.bindToLifecycle(this)
-            binding.viewFinder.controller = cameraController
+            binding.apply {
+                viewFinder.controller = cameraController
+                switchCamera.visibility = View.GONE
+                captureImage.visibility = View.GONE
+            }
+
         } else {
             val cameraProviderFuture = ProcessCameraProvider.getInstance(this)
             cameraProviderFuture.addListener({
@@ -222,7 +228,7 @@ class CameraActivity : AppCompatActivity() {
         private const val TAG = "CameraActivity"
         const val EXTRA_CAMERAX_IMAGE = "CameraX Image"
         const val CAMERAX_RESULT = 200
-        const val ML_TYPE_KEY = "machine_learning_type_key"
-        const val ML_KIT_VALUE = "ml_kit_value"
+        const val CAMERA_TYPE_KEY = "camera_type_key"
+        const val BARCODE_SCANNER = "barcode_scanner"
     }
 }
