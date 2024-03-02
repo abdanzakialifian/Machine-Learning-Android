@@ -1362,6 +1362,7 @@ int color background_floating_material_light 0x7f05001e
 int color background_material_dark 0x7f05001f
 int color background_material_light 0x7f050020
 int color black 0x7f050021
+int color bounding_box_color 0x7f050312
 int color bright_foreground_disabled_material_dark 0x7f050022
 int color bright_foreground_disabled_material_light 0x7f050023
 int color bright_foreground_inverse_material_dark 0x7f050024
@@ -3226,8 +3227,9 @@ int id bounceEnd 0x7f080063
 int id bounceStart 0x7f080064
 int id btn_custom_view 0x7f080065
 int id btn_image_classification 0x7f080066
+int id btn_image_classification_tflite 0x7f080211
 int id btn_mlkit_recognition 0x7f080067
-int id btn_tflite 0x7f080068
+int id btn_object_detection_tflite 0x7f080212
 int id buttonPanel 0x7f080069
 int id cache_measures 0x7f08006a
 int id callMeasure 0x7f08006b
@@ -3479,6 +3481,7 @@ int id open_search_view_toolbar 0x7f080160
 int id open_search_view_toolbar_container 0x7f080161
 int id outline 0x7f080162
 int id outward 0x7f080163
+int id overlay 0x7f080213
 int id overshoot 0x7f080164
 int id packed 0x7f080165
 int id parallax 0x7f080166

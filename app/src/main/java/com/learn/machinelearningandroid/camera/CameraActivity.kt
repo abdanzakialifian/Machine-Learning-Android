@@ -31,8 +31,10 @@ import com.google.mlkit.vision.barcode.BarcodeScanning
 import com.google.mlkit.vision.barcode.common.Barcode
 import com.learn.machinelearningandroid.databinding.ActivityCameraBinding
 import com.learn.machinelearningandroid.tflite.ImageClassifierHelper
+import com.learn.machinelearningandroid.tflite.ObjectDetectorHelper
 import com.learn.machinelearningandroid.utils.createCustomTempFile
 import org.tensorflow.lite.task.gms.vision.classifier.Classifications
+import org.tensorflow.lite.task.gms.vision.detector.Detection
 import java.text.NumberFormat
 import java.util.concurrent.Executors
 
@@ -44,6 +46,7 @@ class CameraActivity : AppCompatActivity() {
     private var isFirstCall = true
     private var cameraType: String? = null
     private lateinit var imageClassifierHelper: ImageClassifierHelper
+    private lateinit var objectDetectorHelper: ObjectDetectorHelper
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -75,6 +78,10 @@ class CameraActivity : AppCompatActivity() {
 
             IMAGE_CLASSIFICATION -> {
                 imageClassificationConfiguration()
+            }
+
+            OBJECT_DETECTION -> {
+                objectDetectionConfiguration()
             }
 
             else -> {
@@ -191,6 +198,90 @@ class CameraActivity : AppCompatActivity() {
         binding.apply {
             tvInferenceTime.visibility = View.VISIBLE
             tvResult.visibility = View.VISIBLE
+            switchCamera.visibility = View.GONE
+            captureImage.visibility = View.GONE
+        }
+    }
+
+    private fun objectDetectionConfiguration() {
+        objectDetectorHelper = ObjectDetectorHelper(
+            context = this,
+            detectorListener = object :
+                ObjectDetectorHelper.DetectorListener {
+                override fun onError(error: String) {
+                    runOnUiThread {
+                        Toast.makeText(this@CameraActivity, error, Toast.LENGTH_SHORT).show()
+                    }
+                }
+
+                override fun onResults(
+                    results: MutableList<Detection>?,
+                    inferenceTime: Long,
+                    imageHeight: Int,
+                    imageWidth: Int,
+                ) {
+                    runOnUiThread {
+                        results?.let { result ->
+                            if (result.isNotEmpty() && result[0].categories.isNotEmpty()) {
+                                binding.overlay.setResults(results, imageWidth, imageHeight)
+                                binding.tvInferenceTime.text =
+                                    StringBuilder().append(inferenceTime).append(" ms")
+                            } else {
+                                binding.overlay.clear()
+                                binding.tvInferenceTime.text = ""
+                            }
+                        }
+                    }
+                }
+            }
+        )
+        val cameraProviderFuture = ProcessCameraProvider.getInstance(this)
+        cameraProviderFuture.addListener({
+            val resolutionSelector = ResolutionSelector.Builder()
+                .setAspectRatioStrategy(AspectRatioStrategy.RATIO_16_9_FALLBACK_AUTO_STRATEGY)
+                .build()
+            val imageAnalyzer = ImageAnalysis.Builder()
+                .setResolutionSelector(resolutionSelector)
+                .setTargetRotation(binding.viewFinder.display.rotation)
+                .setBackpressureStrategy(ImageAnalysis.STRATEGY_KEEP_ONLY_LATEST)
+                .setOutputImageFormat(ImageAnalysis.OUTPUT_IMAGE_FORMAT_RGBA_8888)
+                .build()
+                .also { imageAnalysis ->
+                    imageAnalysis.setAnalyzer(Executors.newSingleThreadExecutor()) { image ->
+                        objectDetectorHelper.detectObject(image)
+                    }
+                }
+            val cameraProvider: ProcessCameraProvider = cameraProviderFuture.get()
+            val preview = Preview.Builder()
+                .build()
+                .also {
+                    it.setSurfaceProvider(binding.viewFinder.surfaceProvider)
+                }
+
+            imageCapture = ImageCapture.Builder().build()
+
+            try {
+                cameraProvider.unbindAll()
+                cameraProvider.bindToLifecycle(
+                    this,
+                    cameraSelector,
+                    preview,
+                    imageCapture,
+                    imageAnalyzer,
+                )
+
+            } catch (exc: Exception) {
+                Toast.makeText(
+                    this@CameraActivity,
+                    "Gagal memunculkan kamera.",
+                    Toast.LENGTH_SHORT
+                ).show()
+                Log.e(TAG, "startCamera: ${exc.message}")
+            }
+        }, ContextCompat.getMainExecutor(this))
+        binding.apply {
+            tvInferenceTime.visibility = View.VISIBLE
+            overlay.visibility = View.VISIBLE
             switchCamera.visibility = View.GONE
             captureImage.visibility = View.GONE
         }
@@ -341,5 +432,6 @@ class CameraActivity : AppCompatActivity() {
         const val CAMERA_TYPE_KEY = "camera_type_key"
         const val BARCODE_SCANNER = "barcode_scanner"
         const val IMAGE_CLASSIFICATION = "image_classification"
+        const val OBJECT_DETECTION = "object_detection"
     }
 }

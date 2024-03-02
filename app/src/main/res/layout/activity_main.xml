@@ -26,9 +26,15 @@
         android:text="ML Kit Recognition" />
 
     <Button
-        android:id="@+id/btn_tflite"
+        android:id="@+id/btn_image_classification_tflite"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="TensorFlow Lite" />
+        android:text="Image Classification TensorFlow Lite" />
+
+    <Button
+        android:id="@+id/btn_object_detection_tflite"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Object Detection TensorFlow Lite" />
 
 </LinearLayout>

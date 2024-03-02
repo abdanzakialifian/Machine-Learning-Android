@@ -26,19 +26,23 @@ public final class ActivityMainBinding implements ViewBinding {
   public final Button btnImageClassification;
 
   @NonNull
+  public final Button btnImageClassificationTflite;
+
+  @NonNull
   public final Button btnMlkitRecognition;
 
   @NonNull
-  public final Button btnTflite;
+  public final Button btnObjectDetectionTflite;
 
   private ActivityMainBinding(@NonNull LinearLayout rootView, @NonNull Button btnCustomView,
-      @NonNull Button btnImageClassification, @NonNull Button btnMlkitRecognition,
-      @NonNull Button btnTflite) {
+      @NonNull Button btnImageClassification, @NonNull Button btnImageClassificationTflite,
+      @NonNull Button btnMlkitRecognition, @NonNull Button btnObjectDetectionTflite) {
     this.rootView = rootView;
     this.btnCustomView = btnCustomView;
     this.btnImageClassification = btnImageClassification;
+    this.btnImageClassificationTflite = btnImageClassificationTflite;
     this.btnMlkitRecognition = btnMlkitRecognition;
-    this.btnTflite = btnTflite;
+    this.btnObjectDetectionTflite = btnObjectDetectionTflite;
   }
 
   @Override
@@ -80,20 +84,26 @@ public final class ActivityMainBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.btn_image_classification_tflite;
+      Button btnImageClassificationTflite = ViewBindings.findChildViewById(rootView, id);
+      if (btnImageClassificationTflite == null) {
+        break missingId;
+      }
+
       id = R.id.btn_mlkit_recognition;
       Button btnMlkitRecognition = ViewBindings.findChildViewById(rootView, id);
       if (btnMlkitRecognition == null) {
         break missingId;
       }
 
-      id = R.id.btn_tflite;
-      Button btnTflite = ViewBindings.findChildViewById(rootView, id);
-      if (btnTflite == null) {
+      id = R.id.btn_object_detection_tflite;
+      Button btnObjectDetectionTflite = ViewBindings.findChildViewById(rootView, id);
+      if (btnObjectDetectionTflite == null) {
         break missingId;
       }
 
       return new ActivityMainBinding((LinearLayout) rootView, btnCustomView, btnImageClassification,
-          btnMlkitRecognition, btnTflite);
+          btnImageClassificationTflite, btnMlkitRecognition, btnObjectDetectionTflite);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

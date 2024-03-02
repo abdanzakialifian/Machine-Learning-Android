@@ -34,8 +34,12 @@ class MainActivity : AppCompatActivity() {
                 navigateToMLKitTextRecognition()
             }
 
-            btnTflite.setOnClickListener {
-                navigateToCamera()
+            btnImageClassificationTflite.setOnClickListener {
+                navigateToImageClassificationTFLiteCamera()
+            }
+
+            btnObjectDetectionTflite.setOnClickListener {
+                navigateToObjectDetectionTFLiteCamera()
             }
         }
     }
@@ -52,9 +56,16 @@ class MainActivity : AppCompatActivity() {
         startActivity(Intent(this, MLKitRecognitionActivity::class.java))
     }
 
-    private fun navigateToCamera() {
+    private fun navigateToImageClassificationTFLiteCamera() {
         Intent(this, CameraActivity::class.java).apply {
             putExtra(CameraActivity.CAMERA_TYPE_KEY, CameraActivity.IMAGE_CLASSIFICATION)
+            startActivity(this)
+        }
+    }
+
+    private fun navigateToObjectDetectionTFLiteCamera() {
+        Intent(this, CameraActivity::class.java).apply {
+            putExtra(CameraActivity.CAMERA_TYPE_KEY, CameraActivity.OBJECT_DETECTION)
             startActivity(this)
         }
     }

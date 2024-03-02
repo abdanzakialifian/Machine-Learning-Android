@@ -1363,6 +1363,7 @@ color background_floating_material_light
 color background_material_dark
 color background_material_light
 color black
+color bounding_box_color
 color bright_foreground_disabled_material_dark
 color bright_foreground_disabled_material_light
 color bright_foreground_inverse_material_dark
@@ -3227,8 +3228,9 @@ id bounceEnd
 id bounceStart
 id btn_custom_view
 id btn_image_classification
+id btn_image_classification_tflite
 id btn_mlkit_recognition
-id btn_tflite
+id btn_object_detection_tflite
 id buttonPanel
 id cache_measures
 id callMeasure
@@ -3480,6 +3482,7 @@ id open_search_view_toolbar
 id open_search_view_toolbar_container
 id outline
 id outward
+id overlay
 id overshoot
 id packed
 id parallax
