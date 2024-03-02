@@ -50,6 +50,7 @@ string gallery
 string image_classifier_failed
 string no_text_recognized
 string result
+string tflitevision_is_not_initialized_yet
 string translate
 string upload
 style Base.Theme.MachineLearningAndroid

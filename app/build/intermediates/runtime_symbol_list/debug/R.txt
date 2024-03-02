@@ -4050,6 +4050,7 @@ int string searchview_navigation_content_description 0x7f1000be
 int string side_sheet_accessibility_pane_title 0x7f1000bf
 int string side_sheet_behavior 0x7f1000c0
 int string status_bar_notification_info_overflow 0x7f1000c1
+int string tflitevision_is_not_initialized_yet 0x7f1000c4
 int string translate 0x7f1000c2
 int string upload 0x7f1000c3
 int style AlertDialog_AppCompat 0x7f110000

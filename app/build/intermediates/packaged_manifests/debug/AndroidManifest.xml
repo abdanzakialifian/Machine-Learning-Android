@@ -124,6 +124,22 @@
                 android:value="androidx.startup" />
         </provider>
 
+        <service
+            android:name="com.google.android.gms.metadata.ModuleDependencies"
+            android:enabled="false"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="com.google.android.gms.metadata.MODULE_DEPENDENCIES" />
+            </intent-filter>
+
+            <meta-data
+                android:name="tflite_gpu_dynamite:222612000:required"
+                android:value="" />
+            <meta-data
+                android:name="tflite_dynamite:3:required"
+                android:value="" />
+        </service>
+
         <activity
             android:name="com.google.android.gms.common.api.GoogleApiActivity"
             android:exported="false"

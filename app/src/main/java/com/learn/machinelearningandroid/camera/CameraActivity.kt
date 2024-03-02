@@ -32,7 +32,7 @@ import com.google.mlkit.vision.barcode.common.Barcode
 import com.learn.machinelearningandroid.databinding.ActivityCameraBinding
 import com.learn.machinelearningandroid.tflite.ImageClassifierHelper
 import com.learn.machinelearningandroid.utils.createCustomTempFile
-import org.tensorflow.lite.task.vision.classifier.Classifications
+import org.tensorflow.lite.task.gms.vision.classifier.Classifications
 import java.text.NumberFormat
 import java.util.concurrent.Executors
 
@@ -116,7 +116,9 @@ class CameraActivity : AppCompatActivity() {
             classifierListener = object :
                 ImageClassifierHelper.ClassifierListener {
                 override fun onError(error: String) {
-                    Toast.makeText(this@CameraActivity, error, Toast.LENGTH_SHORT).show()
+                    runOnUiThread {
+                        Toast.makeText(this@CameraActivity, error, Toast.LENGTH_SHORT).show()
+                    }
                 }
 
                 override fun onResults(results: List<Classifications>?, inferenceTime: Long) {

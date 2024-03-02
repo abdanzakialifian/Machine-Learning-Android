@@ -2,19 +2,24 @@ package com.learn.machinelearningandroid.tflite
 
 import android.content.Context
 import android.graphics.Bitmap
+import android.os.Build
 import android.os.SystemClock
 import android.view.Surface
 import androidx.camera.core.ImageProxy
+import com.google.android.gms.tflite.client.TfLiteInitializationOptions
+import com.google.android.gms.tflite.gpu.support.TfLiteGpu
 import com.learn.machinelearningandroid.R
 import org.tensorflow.lite.DataType
+import org.tensorflow.lite.gpu.CompatibilityList
 import org.tensorflow.lite.support.common.ops.CastOp
 import org.tensorflow.lite.support.image.ImageProcessor
 import org.tensorflow.lite.support.image.TensorImage
 import org.tensorflow.lite.support.image.ops.ResizeOp
 import org.tensorflow.lite.task.core.BaseOptions
 import org.tensorflow.lite.task.core.vision.ImageProcessingOptions
-import org.tensorflow.lite.task.vision.classifier.Classifications
-import org.tensorflow.lite.task.vision.classifier.ImageClassifier
+import org.tensorflow.lite.task.gms.vision.TfLiteVision
+import org.tensorflow.lite.task.gms.vision.classifier.Classifications
+import org.tensorflow.lite.task.gms.vision.classifier.ImageClassifier
 
 class ImageClassifierHelper(
     val context: Context,
@@ -26,7 +31,17 @@ class ImageClassifierHelper(
     private var imageClassifier: ImageClassifier? = null
 
     init {
-        setupImageClassifier()
+        TfLiteGpu.isGpuDelegateAvailable(context).onSuccessTask { isGpuAvailable ->
+            val optionsBuilder = TfLiteInitializationOptions.builder()
+            if (isGpuAvailable) {
+                optionsBuilder.setEnableGpuDelegateSupport(true)
+            }
+            TfLiteVision.initialize(context, optionsBuilder.build())
+        }.addOnSuccessListener {
+            setupImageClassifier()
+        }.addOnFailureListener {
+            classifierListener?.onError(context.getString(R.string.tflitevision_is_not_initialized_yet))
+        }
     }
 
     private fun setupImageClassifier() {
@@ -34,8 +49,18 @@ class ImageClassifierHelper(
             .builder()
             .setScoreThreshold(threshold)
             .setMaxResults(maxResults)
-        val baseOptionsBuilder = BaseOptions.builder().setNumThreads(4).build()
-        optionsBuilder.setBaseOptions(baseOptionsBuilder)
+        val baseOptionsBuilder = BaseOptions.builder()
+
+        if (CompatibilityList().isDelegateSupportedOnThisDevice){
+            baseOptionsBuilder.useGpu()
+        } else if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O_MR1){
+            baseOptionsBuilder.useNnapi()
+        } else {
+            // Menggunakan CPU
+            baseOptionsBuilder.setNumThreads(4)
+        }
+
+        optionsBuilder.setBaseOptions(baseOptionsBuilder.build())
 
         try {
             imageClassifier = ImageClassifier.createFromFileAndOptions(
@@ -49,6 +74,12 @@ class ImageClassifierHelper(
     }
 
     fun classifyImage(image: ImageProxy) {
+        if (TfLiteVision.isInitialized().not()) {
+            val errorMessage = context.getString(R.string.tflitevision_is_not_initialized_yet)
+            classifierListener?.onError(errorMessage)
+            return
+        }
+
         if (imageClassifier == null) {
             setupImageClassifier()
         }
