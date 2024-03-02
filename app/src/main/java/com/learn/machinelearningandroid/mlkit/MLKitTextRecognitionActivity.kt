@@ -95,6 +95,7 @@ class MLKitTextRecognitionActivity : AppCompatActivity() {
 
     private fun startCameraX() {
         val intent = Intent(this, CameraActivity::class.java)
+        intent.putExtra(CameraActivity.ML_TYPE_KEY, CameraActivity.ML_KIT_VALUE)
         launcherIntentCameraX.launch(intent)
     }
 

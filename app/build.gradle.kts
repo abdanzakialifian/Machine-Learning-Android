@@ -45,6 +45,8 @@ dependencies {
     val okhttp = "4.12.0"
     val mlkitTextRecognition = "16.0.0"
     val mlkitTranslation = "17.0.2"
+    val mlkitBarcodeScanning = "18.3.0"
+    val mlkitVision = "1.4.0-alpha04"
 
     implementation("androidx.core:core-ktx:1.12.0")
     implementation("androidx.appcompat:appcompat:1.6.1")
@@ -65,4 +67,6 @@ dependencies {
 
     implementation("com.google.mlkit:text-recognition:$mlkitTextRecognition")
     implementation("com.google.mlkit:translate:$mlkitTranslation")
+    implementation("com.google.android.gms:play-services-mlkit-barcode-scanning:$mlkitBarcodeScanning")
+    implementation("androidx.camera:camera-mlkit-vision:$mlkitVision")
 }

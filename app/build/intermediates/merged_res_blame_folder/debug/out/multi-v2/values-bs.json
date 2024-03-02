@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.learn.machinelearningandroid.app-mergeDebugResources-39:/values-bs/values-bs.xml",
+            "outputFile": "com.learn.machinelearningandroid.app-mergeDebugResources-40:/values-bs/values-bs.xml",
             "map": [
                 {
                     "source": "/Users/abdanzakialifian/.gradle/caches/transforms-3/46af2b67eec5895c1544329796dc6e3d/transformed/play-services-base-18.1.0/res/values-bs/values.xml",

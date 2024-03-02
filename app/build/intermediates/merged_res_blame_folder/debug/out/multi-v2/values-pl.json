@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.learn.machinelearningandroid.app-mergeDebugResources-39:/values-pl/values-pl.xml",
+            "outputFile": "com.learn.machinelearningandroid.app-mergeDebugResources-40:/values-pl/values-pl.xml",
             "map": [
                 {
                     "source": "/Users/abdanzakialifian/.gradle/caches/transforms-3/60b492a510ec931c8abbf232e0a5612c/transformed/appcompat-1.6.1/res/values-pl/values-pl.xml",
