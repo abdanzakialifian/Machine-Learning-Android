@@ -13,6 +13,7 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.learn.machinelearningandroid.R;
+import com.learn.machinelearningandroid.tflite.OverlayView;
 import java.lang.NullPointerException;
 import java.lang.Override;
 import java.lang.String;
@@ -23,6 +24,9 @@ public final class ActivityCameraBinding implements ViewBinding {
 
   @NonNull
   public final AppCompatImageView captureImage;
+
+  @NonNull
+  public final OverlayView overlay;
 
   @NonNull
   public final AppCompatImageView switchCamera;
@@ -37,11 +41,12 @@ public final class ActivityCameraBinding implements ViewBinding {
   public final PreviewView viewFinder;
 
   private ActivityCameraBinding(@NonNull ConstraintLayout rootView,
-      @NonNull AppCompatImageView captureImage, @NonNull AppCompatImageView switchCamera,
-      @NonNull TextView tvInferenceTime, @NonNull TextView tvResult,
-      @NonNull PreviewView viewFinder) {
+      @NonNull AppCompatImageView captureImage, @NonNull OverlayView overlay,
+      @NonNull AppCompatImageView switchCamera, @NonNull TextView tvInferenceTime,
+      @NonNull TextView tvResult, @NonNull PreviewView viewFinder) {
     this.rootView = rootView;
     this.captureImage = captureImage;
+    this.overlay = overlay;
     this.switchCamera = switchCamera;
     this.tvInferenceTime = tvInferenceTime;
     this.tvResult = tvResult;
@@ -81,6 +86,12 @@ public final class ActivityCameraBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.overlay;
+      OverlayView overlay = ViewBindings.findChildViewById(rootView, id);
+      if (overlay == null) {
+        break missingId;
+      }
+
       id = R.id.switchCamera;
       AppCompatImageView switchCamera = ViewBindings.findChildViewById(rootView, id);
       if (switchCamera == null) {
@@ -105,8 +116,8 @@ public final class ActivityCameraBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityCameraBinding((ConstraintLayout) rootView, captureImage, switchCamera,
-          tvInferenceTime, tvResult, viewFinder);
+      return new ActivityCameraBinding((ConstraintLayout) rootView, captureImage, overlay,
+          switchCamera, tvInferenceTime, tvResult, viewFinder);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

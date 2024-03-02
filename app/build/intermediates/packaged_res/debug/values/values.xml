@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="black">#FF000000</color>
+    <color name="bounding_box_color">#FF9800</color>
     <color name="light_blue">#03A9F4</color>
     <color name="light_pink">#FB82AC</color>
     <color name="pink">#E91E63</color>
