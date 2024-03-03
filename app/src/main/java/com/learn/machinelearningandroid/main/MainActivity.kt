@@ -8,6 +8,7 @@ import com.learn.machinelearningandroid.databinding.ActivityMainBinding
 import com.learn.machinelearningandroid.camera.CameraActivity
 import com.learn.machinelearningandroid.imageclassification.ImageClassificationActivity
 import com.learn.machinelearningandroid.mlkit.MLKitRecognitionActivity
+import com.learn.machinelearningandroid.tflite.PredictionActivity
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -41,6 +42,10 @@ class MainActivity : AppCompatActivity() {
             btnObjectDetectionTflite.setOnClickListener {
                 navigateToObjectDetectionTFLiteCamera()
             }
+
+            btnPredictionTflite.setOnClickListener {
+                navigateToPredictionTfLite()
+            }
         }
     }
 
@@ -68,5 +73,9 @@ class MainActivity : AppCompatActivity() {
             putExtra(CameraActivity.CAMERA_TYPE_KEY, CameraActivity.OBJECT_DETECTION)
             startActivity(this)
         }
+    }
+
+    private fun navigateToPredictionTfLite() {
+        startActivity(Intent(this, PredictionActivity::class.java))
     }
 }

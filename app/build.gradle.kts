@@ -53,6 +53,7 @@ dependencies {
     val tfLiteTaskVisionPlayServices = "0.4.2"
     val tfLiteGpuPlayServices = "16.2.0"
     val tfLiteGpu = "2.9.0"
+    val tfLiteJavaPlayServices = "16.1.0"
 
     implementation("androidx.core:core-ktx:1.12.0")
     implementation("androidx.appcompat:appcompat:1.6.1")
@@ -81,6 +82,7 @@ dependencies {
     implementation("org.tensorflow:tensorflow-lite-task-vision-play-services:$tfLiteTaskVisionPlayServices")
     implementation("com.google.android.gms:play-services-tflite-gpu:$tfLiteGpuPlayServices")
     implementation("org.tensorflow:tensorflow-lite-gpu:$tfLiteGpu")
+    implementation("com.google.android.gms:play-services-tflite-java:$tfLiteJavaPlayServices")
 
 
 }

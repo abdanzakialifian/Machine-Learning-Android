@@ -223,6 +223,7 @@ class CameraActivity : AppCompatActivity() {
                     runOnUiThread {
                         results?.let { result ->
                             if (result.isNotEmpty() && result[0].categories.isNotEmpty()) {
+                                Log.d("CEK", result.toString())
                                 binding.overlay.setResults(results, imageWidth, imageHeight)
                                 binding.tvInferenceTime.text =
                                     StringBuilder().append(inferenceTime).append(" ms")
@@ -231,6 +232,7 @@ class CameraActivity : AppCompatActivity() {
                                 binding.tvInferenceTime.text = ""
                             }
                         }
+                        binding.overlay.invalidate()
                     }
                 }
             }
@@ -258,15 +260,12 @@ class CameraActivity : AppCompatActivity() {
                     it.setSurfaceProvider(binding.viewFinder.surfaceProvider)
                 }
 
-            imageCapture = ImageCapture.Builder().build()
-
             try {
                 cameraProvider.unbindAll()
                 cameraProvider.bindToLifecycle(
                     this,
                     cameraSelector,
                     preview,
-                    imageCapture,
                     imageAnalyzer,
                 )
 

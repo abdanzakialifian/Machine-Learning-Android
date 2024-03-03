@@ -3226,11 +3226,13 @@ id bounce
 id bounceBoth
 id bounceEnd
 id bounceStart
+id btnPredict
 id btn_custom_view
 id btn_image_classification
 id btn_image_classification_tflite
 id btn_mlkit_recognition
 id btn_object_detection_tflite
+id btn_prediction_tflite
 id buttonPanel
 id cache_measures
 id callMeasure
@@ -3308,6 +3310,7 @@ id easeIn
 id easeInOut
 id easeOut
 id east
+id edSales
 id edge
 id edit_query
 id edit_text_id
@@ -3630,6 +3633,8 @@ id translated_text
 id triangle
 id tvInferenceTime
 id tvResult
+id tvSales
+id tvTitle
 id unchecked
 id uniform
 id unlabeled
@@ -3777,6 +3782,7 @@ layout activity_image_classification
 layout activity_main
 layout activity_mlkit_recognition
 layout activity_mlkit_result
+layout activity_prediction
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
@@ -4041,12 +4047,16 @@ string mtrl_switch_track_path
 string mtrl_timepicker_cancel
 string mtrl_timepicker_confirm
 string no_text_recognized
+string no_tflite_interpreter_loaded
 string password_toggle_content_description
 string path_password_eye
 string path_password_eye_mask_strike_through
 string path_password_eye_mask_visible
 string path_password_strike_through
+string predict
 string result
+string rice_stock_predictor
+string sales_this_month
 string search_menu_title
 string searchbar_scrolling_view_behavior
 string searchview_clear_text_content_description
@@ -4054,6 +4064,7 @@ string searchview_navigation_content_description
 string side_sheet_accessibility_pane_title
 string side_sheet_behavior
 string status_bar_notification_info_overflow
+string tflite_is_not_initialized_yet
 string tflitevision_is_not_initialized_yet
 string translate
 string upload

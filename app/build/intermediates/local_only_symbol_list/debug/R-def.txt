@@ -12,14 +12,17 @@ drawable ic_launcher_foreground
 drawable ic_placeholder
 drawable ic_switch_camera
 id analyzeButton
+id btnPredict
 id btn_custom_view
 id btn_image_classification
 id btn_image_classification_tflite
 id btn_mlkit_recognition
 id btn_object_detection_tflite
+id btn_prediction_tflite
 id cameraButton
 id cameraXButton
 id captureImage
+id edSales
 id galleryButton
 id img_view
 id overlay
@@ -33,6 +36,8 @@ id translateButton
 id translated_text
 id tvInferenceTime
 id tvResult
+id tvSales
+id tvTitle
 id uploadButton
 id viewFinder
 layout activity_camera
@@ -41,6 +46,7 @@ layout activity_image_classification
 layout activity_main
 layout activity_mlkit_recognition
 layout activity_mlkit_result
+layout activity_prediction
 mipmap ic_launcher
 mipmap ic_launcher_round
 string analyze
@@ -52,7 +58,12 @@ string empty_image_warning
 string gallery
 string image_classifier_failed
 string no_text_recognized
+string no_tflite_interpreter_loaded
+string predict
 string result
+string rice_stock_predictor
+string sales_this_month
+string tflite_is_not_initialized_yet
 string tflitevision_is_not_initialized_yet
 string translate
 string upload

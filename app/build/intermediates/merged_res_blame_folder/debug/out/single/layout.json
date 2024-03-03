@@ -4,10 +4,6 @@
         "source": "/Users/abdanzakialifian/.gradle/daemon/8.2/com.learn.machinelearningandroid.app-main-44:/layout/activity_mlkit_recognition.xml"
     },
     {
-        "merged": "com.learn.machinelearningandroid.app-mergeDebugResources-41:/layout/activity_camera.xml",
-        "source": "com.learn.machinelearningandroid.app-main-44:/layout/activity_camera.xml"
-    },
-    {
         "merged": "/Users/abdanzakialifian/.gradle/daemon/8.2/com.learn.machinelearningandroid.app-mergeDebugResources-41:/layout/activity_image_classification.xml",
         "source": "/Users/abdanzakialifian/.gradle/daemon/8.2/com.learn.machinelearningandroid.app-main-44:/layout/activity_image_classification.xml"
     },
@@ -26,5 +22,13 @@
     {
         "merged": "/Users/abdanzakialifian/.gradle/daemon/8.2/com.learn.machinelearningandroid.app-mergeDebugResources-41:/layout/activity_camera.xml",
         "source": "/Users/abdanzakialifian/.gradle/daemon/8.2/com.learn.machinelearningandroid.app-main-44:/layout/activity_camera.xml"
+    },
+    {
+        "merged": "com.learn.machinelearningandroid.app-mergeDebugResources-41:/layout/activity_main.xml",
+        "source": "com.learn.machinelearningandroid.app-main-44:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.learn.machinelearningandroid.app-mergeDebugResources-41:/layout/activity_prediction.xml",
+        "source": "com.learn.machinelearningandroid.app-main-44:/layout/activity_prediction.xml"
     }
 ]

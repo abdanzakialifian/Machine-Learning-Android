@@ -46,7 +46,7 @@ class OverlayView(context: Context?, attrs: AttributeSet?) : View(context, attrs
 
             // Create text to display alongside detected objects
             val drawableText = StringBuilder().append(result.categories[0].label).append(" ")
-                .append(NumberFormat.getPercentInstance().format(result.categories[0].score).trim())
+                .append(NumberFormat.getPercentInstance().format(result.categories[0].score))
 
             // Draw rect behind display text
             textBackgroundPaint.getTextBounds(drawableText, 0, drawableText.length, bounds)

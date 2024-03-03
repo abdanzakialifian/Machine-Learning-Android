@@ -85,8 +85,6 @@ class ObjectDetectorHelper(
 
         val imageProcessor = ImageProcessor.Builder()
             .add(Rot90Op(-image.imageInfo.rotationDegrees / 90))
-            .add(ResizeOp(224, 224, ResizeOp.ResizeMethod.NEAREST_NEIGHBOR))
-            .add(CastOp(DataType.UINT8))
             .build()
 
         val tensorImage = imageProcessor.process(TensorImage.fromBitmap(toBitmap(image)))

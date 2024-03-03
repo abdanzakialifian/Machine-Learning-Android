@@ -39,6 +39,9 @@
         android:testOnly="true"
         android:theme="@style/Theme.MachineLearningAndroid" >
         <activity
+            android:name="com.learn.machinelearningandroid.tflite.PredictionActivity"
+            android:exported="false" />
+        <activity
             android:name="com.learn.machinelearningandroid.mlkit.MLKitResultActivity"
             android:exported="false" />
         <activity
