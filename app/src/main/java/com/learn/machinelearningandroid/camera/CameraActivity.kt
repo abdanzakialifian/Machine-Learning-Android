@@ -30,6 +30,7 @@ import com.google.mlkit.vision.barcode.BarcodeScannerOptions
 import com.google.mlkit.vision.barcode.BarcodeScanning
 import com.google.mlkit.vision.barcode.common.Barcode
 import com.learn.machinelearningandroid.databinding.ActivityCameraBinding
+import com.learn.machinelearningandroid.mediapipe.MediaPipeImageClassifierHelper
 import com.learn.machinelearningandroid.tflite.ImageClassifierHelper
 import com.learn.machinelearningandroid.tflite.ObjectDetectorHelper
 import com.learn.machinelearningandroid.utils.createCustomTempFile
@@ -37,6 +38,7 @@ import org.tensorflow.lite.task.gms.vision.classifier.Classifications
 import org.tensorflow.lite.task.gms.vision.detector.Detection
 import java.text.NumberFormat
 import java.util.concurrent.Executors
+import com.google.mediapipe.tasks.components.containers.Classifications as ClassificationsMediaPipe
 
 class CameraActivity : AppCompatActivity() {
     private lateinit var binding: ActivityCameraBinding
@@ -46,6 +48,7 @@ class CameraActivity : AppCompatActivity() {
     private var isFirstCall = true
     private var cameraType: String? = null
     private lateinit var imageClassifierHelper: ImageClassifierHelper
+    private lateinit var mediaPipeImageClassifierHelper: MediaPipeImageClassifierHelper
     private lateinit var objectDetectorHelper: ObjectDetectorHelper
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -82,6 +85,10 @@ class CameraActivity : AppCompatActivity() {
 
             OBJECT_DETECTION -> {
                 objectDetectionConfiguration()
+            }
+
+            IMAGE_CLASSIFICATION_MEDIA_PIPE -> {
+                imageClassificationMediaPipeConfiguration()
             }
 
             else -> {
@@ -165,6 +172,92 @@ class CameraActivity : AppCompatActivity() {
                 .also { imageAnalysis ->
                     imageAnalysis.setAnalyzer(Executors.newSingleThreadExecutor()) { image ->
                         imageClassifierHelper.classifyImage(image)
+                    }
+                }
+            val cameraProvider: ProcessCameraProvider = cameraProviderFuture.get()
+            val preview = Preview.Builder()
+                .build()
+                .also {
+                    it.setSurfaceProvider(binding.viewFinder.surfaceProvider)
+                }
+
+            imageCapture = ImageCapture.Builder().build()
+
+            try {
+                cameraProvider.unbindAll()
+                cameraProvider.bindToLifecycle(
+                    this,
+                    cameraSelector,
+                    preview,
+                    imageCapture,
+                    imageAnalyzer,
+                )
+
+            } catch (exc: Exception) {
+                Toast.makeText(
+                    this@CameraActivity,
+                    "Gagal memunculkan kamera.",
+                    Toast.LENGTH_SHORT
+                ).show()
+                Log.e(TAG, "startCamera: ${exc.message}")
+            }
+        }, ContextCompat.getMainExecutor(this))
+        binding.apply {
+            tvInferenceTime.visibility = View.VISIBLE
+            tvResult.visibility = View.VISIBLE
+            switchCamera.visibility = View.GONE
+            captureImage.visibility = View.GONE
+        }
+    }
+
+    private fun imageClassificationMediaPipeConfiguration() {
+        mediaPipeImageClassifierHelper = MediaPipeImageClassifierHelper(
+            context = this,
+            classifierListener = object :
+                MediaPipeImageClassifierHelper.ClassifierListener {
+                override fun onError(error: String) {
+                    runOnUiThread {
+                        Toast.makeText(this@CameraActivity, error, Toast.LENGTH_SHORT).show()
+                    }
+                }
+
+                override fun onResults(results: List<ClassificationsMediaPipe>?, inferenceTime: Long) {
+                    runOnUiThread {
+                        results?.let { result ->
+                            if (result.isNotEmpty() && result[0].categories().isNotEmpty()) {
+                                val sortedCategories =
+                                    result[0].categories().sortedByDescending { it.score() }
+                                val displayResult = sortedCategories.joinToString("\n") {
+                                    StringBuilder().append(it.categoryName()).append(" ").append(
+                                        NumberFormat.getPercentInstance().format(it.score()).trim()
+                                    )
+                                }
+                                binding.tvResult.text = displayResult
+                                binding.tvInferenceTime.text =
+                                    StringBuilder().append(inferenceTime).append(" ms")
+                            } else {
+                                binding.tvResult.text = ""
+                                binding.tvInferenceTime.text = ""
+                            }
+                        }
+                    }
+                }
+            }
+        )
+        val cameraProviderFuture = ProcessCameraProvider.getInstance(this)
+        cameraProviderFuture.addListener({
+            val resolutionSelector = ResolutionSelector.Builder()
+                .setAspectRatioStrategy(AspectRatioStrategy.RATIO_16_9_FALLBACK_AUTO_STRATEGY)
+                .build()
+            val imageAnalyzer = ImageAnalysis.Builder()
+                .setResolutionSelector(resolutionSelector)
+                .setTargetRotation(binding.viewFinder.display.rotation)
+                .setBackpressureStrategy(ImageAnalysis.STRATEGY_KEEP_ONLY_LATEST)
+                .setOutputImageFormat(ImageAnalysis.OUTPUT_IMAGE_FORMAT_RGBA_8888)
+                .build()
+                .also { imageAnalysis ->
+                    imageAnalysis.setAnalyzer(Executors.newSingleThreadExecutor()) { image ->
+                        mediaPipeImageClassifierHelper.classifyImage(image)
                     }
                 }
             val cameraProvider: ProcessCameraProvider = cameraProviderFuture.get()
@@ -432,5 +525,6 @@ class CameraActivity : AppCompatActivity() {
         const val BARCODE_SCANNER = "barcode_scanner"
         const val IMAGE_CLASSIFICATION = "image_classification"
         const val OBJECT_DETECTION = "object_detection"
+        const val IMAGE_CLASSIFICATION_MEDIA_PIPE = "image_classification_media_pipe"
     }
 }

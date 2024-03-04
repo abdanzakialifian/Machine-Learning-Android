@@ -3229,6 +3229,7 @@ id bounceStart
 id btnPredict
 id btn_custom_view
 id btn_image_classification
+id btn_image_classification_media_pipe
 id btn_image_classification_tflite
 id btn_mlkit_recognition
 id btn_object_detection_tflite

@@ -46,6 +46,10 @@ class MainActivity : AppCompatActivity() {
             btnPredictionTflite.setOnClickListener {
                 navigateToPredictionTfLite()
             }
+
+            btnImageClassificationMediaPipe.setOnClickListener {
+                navigateToImageClassificationMediaPipeCamera()
+            }
         }
     }
 
@@ -77,5 +81,12 @@ class MainActivity : AppCompatActivity() {
 
     private fun navigateToPredictionTfLite() {
         startActivity(Intent(this, PredictionActivity::class.java))
+    }
+
+    private fun navigateToImageClassificationMediaPipeCamera() {
+        Intent(this, CameraActivity::class.java).apply {
+            putExtra(CameraActivity.CAMERA_TYPE_KEY, CameraActivity.IMAGE_CLASSIFICATION_MEDIA_PIPE)
+            startActivity(this)
+        }
     }
 }
