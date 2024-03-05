@@ -3,10 +3,11 @@ package com.learn.machinelearningandroid.main
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.learn.machinelearningandroid.camera.CameraActivity
 import com.learn.machinelearningandroid.customview.CustomViewActivity
 import com.learn.machinelearningandroid.databinding.ActivityMainBinding
-import com.learn.machinelearningandroid.camera.CameraActivity
 import com.learn.machinelearningandroid.imageclassification.ImageClassificationActivity
+import com.learn.machinelearningandroid.mediapipe.AudioClassificationActivity
 import com.learn.machinelearningandroid.mlkit.MLKitRecognitionActivity
 import com.learn.machinelearningandroid.tflite.PredictionActivity
 
@@ -50,6 +51,10 @@ class MainActivity : AppCompatActivity() {
             btnImageClassificationMediaPipe.setOnClickListener {
                 navigateToImageClassificationMediaPipeCamera()
             }
+
+            btnAudioClassificationMediaPipe.setOnClickListener {
+                navigateToAudioClassificationMediaPipe()
+            }
         }
     }
 
@@ -88,5 +93,9 @@ class MainActivity : AppCompatActivity() {
             putExtra(CameraActivity.CAMERA_TYPE_KEY, CameraActivity.IMAGE_CLASSIFICATION_MEDIA_PIPE)
             startActivity(this)
         }
+    }
+
+    private fun navigateToAudioClassificationMediaPipe() {
+        startActivity(Intent(this, AudioClassificationActivity::class.java))
     }
 }

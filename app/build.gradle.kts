@@ -54,7 +54,6 @@ dependencies {
     val tfLiteGpuPlayServicesVersion = "16.2.0"
     val tfLiteGpuVersion = "2.9.0"
     val tfLiteJavaPlayServicesVersion = "16.1.0"
-    val tfLiteVersion = "0.4.4"
     val mediaPipeVersion = "0.20230731"
 
     implementation("androidx.core:core-ktx:1.12.0")
@@ -86,6 +85,7 @@ dependencies {
     implementation("org.tensorflow:tensorflow-lite-gpu:$tfLiteGpuVersion")
     implementation("com.google.android.gms:play-services-tflite-java:$tfLiteJavaPlayServicesVersion")
     implementation("com.google.mediapipe:tasks-vision:$mediaPipeVersion")
+    implementation("com.google.mediapipe:tasks-audio:$mediaPipeVersion")
 
 
 }

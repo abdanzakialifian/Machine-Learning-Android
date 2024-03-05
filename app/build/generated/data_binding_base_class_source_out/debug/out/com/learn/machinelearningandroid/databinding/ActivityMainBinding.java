@@ -20,6 +20,9 @@ public final class ActivityMainBinding implements ViewBinding {
   private final LinearLayout rootView;
 
   @NonNull
+  public final Button btnAudioClassificationMediaPipe;
+
+  @NonNull
   public final Button btnCustomView;
 
   @NonNull
@@ -40,11 +43,13 @@ public final class ActivityMainBinding implements ViewBinding {
   @NonNull
   public final Button btnPredictionTflite;
 
-  private ActivityMainBinding(@NonNull LinearLayout rootView, @NonNull Button btnCustomView,
+  private ActivityMainBinding(@NonNull LinearLayout rootView,
+      @NonNull Button btnAudioClassificationMediaPipe, @NonNull Button btnCustomView,
       @NonNull Button btnImageClassification, @NonNull Button btnImageClassificationMediaPipe,
       @NonNull Button btnImageClassificationTflite, @NonNull Button btnMlkitRecognition,
       @NonNull Button btnObjectDetectionTflite, @NonNull Button btnPredictionTflite) {
     this.rootView = rootView;
+    this.btnAudioClassificationMediaPipe = btnAudioClassificationMediaPipe;
     this.btnCustomView = btnCustomView;
     this.btnImageClassification = btnImageClassification;
     this.btnImageClassificationMediaPipe = btnImageClassificationMediaPipe;
@@ -81,6 +86,12 @@ public final class ActivityMainBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.btn_audio_classification_media_pipe;
+      Button btnAudioClassificationMediaPipe = ViewBindings.findChildViewById(rootView, id);
+      if (btnAudioClassificationMediaPipe == null) {
+        break missingId;
+      }
+
       id = R.id.btn_custom_view;
       Button btnCustomView = ViewBindings.findChildViewById(rootView, id);
       if (btnCustomView == null) {
@@ -123,9 +134,10 @@ public final class ActivityMainBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityMainBinding((LinearLayout) rootView, btnCustomView, btnImageClassification,
-          btnImageClassificationMediaPipe, btnImageClassificationTflite, btnMlkitRecognition,
-          btnObjectDetectionTflite, btnPredictionTflite);
+      return new ActivityMainBinding((LinearLayout) rootView, btnAudioClassificationMediaPipe,
+          btnCustomView, btnImageClassification, btnImageClassificationMediaPipe,
+          btnImageClassificationTflite, btnMlkitRecognition, btnObjectDetectionTflite,
+          btnPredictionTflite);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

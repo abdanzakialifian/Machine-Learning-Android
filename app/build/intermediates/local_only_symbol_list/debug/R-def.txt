@@ -11,8 +11,10 @@ drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable ic_placeholder
 drawable ic_switch_camera
+id activity_main
 id analyzeButton
 id btnPredict
+id btn_audio_classification_media_pipe
 id btn_custom_view
 id btn_image_classification
 id btn_image_classification_media_pipe
@@ -20,6 +22,8 @@ id btn_image_classification_tflite
 id btn_mlkit_recognition
 id btn_object_detection_tflite
 id btn_prediction_tflite
+id btn_start
+id btn_stop
 id cameraButton
 id cameraXButton
 id captureImage
@@ -41,6 +45,7 @@ id tvSales
 id tvTitle
 id uploadButton
 id viewFinder
+layout activity_audio_classification
 layout activity_camera
 layout activity_custom_view
 layout activity_image_classification
@@ -52,6 +57,9 @@ mipmap ic_launcher
 mipmap ic_launcher_round
 string analyze
 string app_name
+string audio_classifier_failed
+string btn_start
+string btn_stop
 string camera
 string camera_x
 string downloading_model_fail

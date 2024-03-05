@@ -3194,6 +3194,7 @@ int id action_mode_close_button 0x7f080042
 int id action_text 0x7f080043
 int id actions 0x7f080044
 int id activity_chooser_view_content 0x7f080045
+int id activity_main 0x7f080219
 int id add 0x7f080046
 int id adjust_height 0x7f080047
 int id adjust_width 0x7f080048
@@ -3226,6 +3227,7 @@ int id bounceBoth 0x7f080062
 int id bounceEnd 0x7f080063
 int id bounceStart 0x7f080064
 int id btnPredict 0x7f080065
+int id btn_audio_classification_media_pipe 0x7f08021a
 int id btn_custom_view 0x7f080066
 int id btn_image_classification 0x7f080067
 int id btn_image_classification_media_pipe 0x7f080068
@@ -3233,6 +3235,8 @@ int id btn_image_classification_tflite 0x7f080069
 int id btn_mlkit_recognition 0x7f08006a
 int id btn_object_detection_tflite 0x7f08006b
 int id btn_prediction_tflite 0x7f08006c
+int id btn_start 0x7f08021b
+int id btn_stop 0x7f08021c
 int id buttonPanel 0x7f08006d
 int id cache_measures 0x7f08006e
 int id callMeasure 0x7f08006f
@@ -3776,6 +3780,7 @@ int layout abc_search_dropdown_item_icons_2line 0x7f0b0018
 int layout abc_search_view 0x7f0b0019
 int layout abc_select_dialog_material 0x7f0b001a
 int layout abc_tooltip 0x7f0b001b
+int layout activity_audio_classification 0x7f0b0072
 int layout activity_camera 0x7f0b001c
 int layout activity_custom_view 0x7f0b001d
 int layout activity_image_classification 0x7f0b001e
@@ -3897,12 +3902,15 @@ int string analyze 0x7f10001b
 int string androidx_startup 0x7f10001c
 int string app_name 0x7f10001d
 int string appbar_scrolling_view_behavior 0x7f10001e
+int string audio_classifier_failed 0x7f1000ca
 int string bottom_sheet_behavior 0x7f10001f
 int string bottomsheet_action_collapse 0x7f100020
 int string bottomsheet_action_expand 0x7f100021
 int string bottomsheet_action_expand_halfway 0x7f100022
 int string bottomsheet_drag_handle_clicked 0x7f100023
 int string bottomsheet_drag_handle_content_description 0x7f100024
+int string btn_start 0x7f1000cb
+int string btn_stop 0x7f1000cc
 int string call_notification_answer_action 0x7f100025
 int string call_notification_answer_video_action 0x7f100026
 int string call_notification_decline_action 0x7f100027

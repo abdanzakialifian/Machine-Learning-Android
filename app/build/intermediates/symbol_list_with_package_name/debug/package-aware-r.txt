@@ -3195,6 +3195,7 @@ id action_mode_close_button
 id action_text
 id actions
 id activity_chooser_view_content
+id activity_main
 id add
 id adjust_height
 id adjust_width
@@ -3227,6 +3228,7 @@ id bounceBoth
 id bounceEnd
 id bounceStart
 id btnPredict
+id btn_audio_classification_media_pipe
 id btn_custom_view
 id btn_image_classification
 id btn_image_classification_media_pipe
@@ -3234,6 +3236,8 @@ id btn_image_classification_tflite
 id btn_mlkit_recognition
 id btn_object_detection_tflite
 id btn_prediction_tflite
+id btn_start
+id btn_stop
 id buttonPanel
 id cache_measures
 id callMeasure
@@ -3777,6 +3781,7 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_audio_classification
 layout activity_camera
 layout activity_custom_view
 layout activity_image_classification
@@ -3898,12 +3903,15 @@ string analyze
 string androidx_startup
 string app_name
 string appbar_scrolling_view_behavior
+string audio_classifier_failed
 string bottom_sheet_behavior
 string bottomsheet_action_collapse
 string bottomsheet_action_expand
 string bottomsheet_action_expand_halfway
 string bottomsheet_drag_handle_clicked
 string bottomsheet_drag_handle_content_description
+string btn_start
+string btn_stop
 string call_notification_answer_action
 string call_notification_answer_video_action
 string call_notification_decline_action

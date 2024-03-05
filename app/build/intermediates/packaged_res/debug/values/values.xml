@@ -8,6 +8,9 @@
     <color name="white">#FFFFFFFF</color>
     <string name="analyze">Analyze</string>
     <string name="app_name">Machine Learning Android</string>
+    <string name="audio_classifier_failed">Audio Classifier failed to initialize. See error logs for details</string>
+    <string name="btn_start">Start</string>
+    <string name="btn_stop">Stop</string>
     <string name="camera">Kamera</string>
     <string name="camera_x">CameraX</string>
     <string name="downloading_model_fail">Model gagal diunduh</string>
