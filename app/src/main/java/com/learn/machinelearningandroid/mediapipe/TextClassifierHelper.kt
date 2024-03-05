@@ -13,8 +13,8 @@ class TextClassifierHelper(
     var classifierListener: ClassifierListener,
     private val modelName: String = "bert_classifier.tflite",
 ) {
-
     private var textClassifier: TextClassifier? = null
+
     private var executor: ScheduledThreadPoolExecutor? = null
 
     init {

@@ -24,15 +24,19 @@ class TextClassificationActivity : AppCompatActivity() {
 
                 override fun onResults(results: List<Classifications>?, inferenceTime: Long) {
                     runOnUiThread {
-                        results?.let { it ->
-                            if (it.isNotEmpty() && it[0].categories().isNotEmpty()) {
+                        results?.let { result ->
+                            if (result.isNotEmpty() && result[0].categories().isNotEmpty()) {
                                 val sortedCategories =
-                                    it[0].categories().sortedByDescending { it?.score() }
+                                    result[0].categories()
+                                        .sortedByDescending { sorted -> sorted?.score() }
 
                                 val displayResult =
                                     sortedCategories.joinToString("\n") {
-                                        "${it.categoryName()} " + NumberFormat.getPercentInstance()
-                                            .format(it.score()).trim()
+                                        StringBuilder().append(it.categoryName()).append(" ")
+                                            .append(
+                                                NumberFormat.getPercentInstance()
+                                                    .format(it.score()).trim()
+                                            )
                                     }
                                 binding.tvResult.text = displayResult
                             } else {
