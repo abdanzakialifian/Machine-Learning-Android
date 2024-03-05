@@ -1,3 +1,0 @@
-com.learn.machinelearningandroid.test
-style WhiteBackgroundDialogTheme
-style WhiteBackgroundTheme
