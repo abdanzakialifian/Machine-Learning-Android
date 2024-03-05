@@ -5,6 +5,10 @@ import android.content.res.AssetManager
 import com.google.android.gms.tflite.client.TfLiteInitializationOptions
 import com.google.android.gms.tflite.gpu.support.TfLiteGpu
 import com.google.android.gms.tflite.java.TfLite
+import com.google.firebase.ml.modeldownloader.CustomModel
+import com.google.firebase.ml.modeldownloader.CustomModelDownloadConditions
+import com.google.firebase.ml.modeldownloader.DownloadType
+import com.google.firebase.ml.modeldownloader.FirebaseModelDownloader
 import com.learn.machinelearningandroid.R
 import okio.IOException
 import org.tensorflow.lite.InterpreterApi
@@ -19,6 +23,7 @@ class PredictionHelper(
     val context: Context,
     private val onResult: (String) -> Unit,
     private val onError: (String) -> Unit,
+    private val onDownloadSuccess: () -> Unit,
     private val modelName: String = "rice_stock.tflite",
 ) {
     private var interpreter: InterpreterApi? = null
@@ -31,10 +36,30 @@ class PredictionHelper(
             }
             TfLite.initialize(context, optionsBuilder.build())
         }.addOnSuccessListener {
-            loadLocalModel()
+            downloadModel()
         }.addOnFailureListener {
             onError(context.getString(R.string.tflite_is_not_initialized_yet))
         }
+    }
+
+    @Synchronized
+    private fun downloadModel() {
+        val conditions = CustomModelDownloadConditions.Builder()
+            .requireWifi()
+            .build()
+        FirebaseModelDownloader.getInstance()
+            .getModel("Rice-Stock", DownloadType.LOCAL_MODEL, conditions)
+            .addOnSuccessListener { model ->
+                try {
+                    onDownloadSuccess()
+                    initializeInterpreter(model)
+                } catch (e: IOException) {
+                    onError(e.message.toString())
+                }
+            }
+            .addOnFailureListener {
+                onError(context.getString(R.string.firebaseml_model_download_failed))
+            }
     }
 
     fun predict(input: String) {
@@ -83,6 +108,12 @@ class PredictionHelper(
             }
             if (model is ByteBuffer) {
                 interpreter = InterpreterApi.create(model, options)
+            }
+
+            if (model is CustomModel) {
+                model.file?.let { file ->
+                    interpreter = InterpreterApi.create(file, options)
+                }
             }
         } catch (e: Exception) {
             onError(e.message.toString())

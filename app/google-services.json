@@ -1,0 +1,82 @@
+{
+  "project_info": {
+    "project_number": "277913864728",
+    "project_id": "fir-practice-907f9",
+    "storage_bucket": "fir-practice-907f9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:277913864728:android:07c83e305d30d89331116d",
+        "android_client_info": {
+          "package_name": "com.dicoding.ditonton"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "277913864728-7opprk1s1s8vq05bp3skqlkiv1qiutc9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDxCA7cCtiFhI9l3BCsVtazKFk2ghh6sD0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "277913864728-7opprk1s1s8vq05bp3skqlkiv1qiutc9.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "277913864728-b5sulp8c7iqrhu6j1qtqd29saaof51gk.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.dicoding.ditonton"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:277913864728:android:8db46347ed6ef86831116d",
+        "android_client_info": {
+          "package_name": "com.learn.machinelearningandroid"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "277913864728-7opprk1s1s8vq05bp3skqlkiv1qiutc9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDxCA7cCtiFhI9l3BCsVtazKFk2ghh6sD0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "277913864728-7opprk1s1s8vq05bp3skqlkiv1qiutc9.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "277913864728-b5sulp8c7iqrhu6j1qtqd29saaof51gk.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.dicoding.ditonton"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

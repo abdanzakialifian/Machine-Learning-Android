@@ -1,6 +1,7 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+    id("com.google.gms.google-services")
 }
 
 android {
@@ -55,6 +56,8 @@ dependencies {
     val tfLiteGpuVersion = "2.9.0"
     val tfLiteJavaPlayServicesVersion = "16.1.0"
     val mediaPipeVersion = "0.20230731"
+    val firebaseBomVersion = "32.7.3"
+    val firebaseModelDownloadVersion = "24.2.3"
 
     implementation("androidx.core:core-ktx:1.12.0")
     implementation("androidx.appcompat:appcompat:1.6.1")
@@ -87,4 +90,7 @@ dependencies {
     implementation("com.google.mediapipe:tasks-vision:$mediaPipeVersion")
     implementation("com.google.mediapipe:tasks-audio:$mediaPipeVersion")
     implementation("com.google.mediapipe:tasks-text:$mediaPipeVersion")
+
+    implementation(platform("com.google.firebase:firebase-bom:$firebaseBomVersion"))
+    implementation("com.google.firebase:firebase-ml-modeldownloader:$firebaseModelDownloadVersion")
 }

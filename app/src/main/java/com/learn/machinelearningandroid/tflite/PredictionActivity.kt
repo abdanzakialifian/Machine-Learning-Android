@@ -13,6 +13,7 @@ class PredictionActivity : AppCompatActivity() {
         binding = ActivityPredictionBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        binding.btnPredict.isEnabled = false
         val predictionHelper = PredictionHelper(
             context = this,
             onResult = { result ->
@@ -20,6 +21,9 @@ class PredictionActivity : AppCompatActivity() {
             },
             onError = { errorMessage ->
                 Toast.makeText(this, errorMessage, Toast.LENGTH_SHORT).show()
+            },
+            onDownloadSuccess = {
+                binding.btnPredict.isEnabled = true
             }
         )
 
