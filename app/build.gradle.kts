@@ -86,6 +86,5 @@ dependencies {
     implementation("com.google.android.gms:play-services-tflite-java:$tfLiteJavaPlayServicesVersion")
     implementation("com.google.mediapipe:tasks-vision:$mediaPipeVersion")
     implementation("com.google.mediapipe:tasks-audio:$mediaPipeVersion")
-
-
+    implementation("com.google.mediapipe:tasks-text:$mediaPipeVersion")
 }

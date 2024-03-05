@@ -8,6 +8,7 @@ import com.learn.machinelearningandroid.customview.CustomViewActivity
 import com.learn.machinelearningandroid.databinding.ActivityMainBinding
 import com.learn.machinelearningandroid.imageclassification.ImageClassificationActivity
 import com.learn.machinelearningandroid.mediapipe.AudioClassificationActivity
+import com.learn.machinelearningandroid.mediapipe.TextClassificationActivity
 import com.learn.machinelearningandroid.mlkit.MLKitRecognitionActivity
 import com.learn.machinelearningandroid.tflite.PredictionActivity
 
@@ -55,6 +56,10 @@ class MainActivity : AppCompatActivity() {
             btnAudioClassificationMediaPipe.setOnClickListener {
                 navigateToAudioClassificationMediaPipe()
             }
+
+            btnTextClassificationMediaPipe.setOnClickListener {
+                navigateToTextClassificationMediaPipe()
+            }
         }
     }
 
@@ -97,5 +102,9 @@ class MainActivity : AppCompatActivity() {
 
     private fun navigateToAudioClassificationMediaPipe() {
         startActivity(Intent(this, AudioClassificationActivity::class.java))
+    }
+
+    private fun navigateToTextClassificationMediaPipe() {
+        startActivity(Intent(this, TextClassificationActivity::class.java))
     }
 }

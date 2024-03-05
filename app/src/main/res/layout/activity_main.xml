@@ -55,4 +55,10 @@
         android:layout_height="wrap_content"
         android:text="Audio Classification MediaPipe" />
 
+    <Button
+        android:id="@+id/btn_text_classification_media_pipe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Text Classification MediaPipe" />
+
 </LinearLayout>
