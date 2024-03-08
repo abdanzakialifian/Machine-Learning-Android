@@ -49,6 +49,7 @@ dependencies {
     val mlkitTranslationVersion = "17.0.2"
     val mlkitBarcodeScanningVersion = "18.3.0"
     val mlkitVisionVersion = "1.4.0-alpha04"
+    val mlkitSmartReply = "16.0.0-beta1"
     val tfLiteMetadataVersion = "0.4.4"
     val tfLiteSupportPlayServicesVersion = "16.1.0"
     val tfLiteTaskVisionPlayServicesVersion = "0.4.2"
@@ -80,6 +81,7 @@ dependencies {
     implementation("com.google.mlkit:translate:$mlkitTranslationVersion")
     implementation("com.google.android.gms:play-services-mlkit-barcode-scanning:$mlkitBarcodeScanningVersion")
     implementation("androidx.camera:camera-mlkit-vision:$mlkitVisionVersion")
+    implementation("com.google.android.gms:play-services-mlkit-smart-reply:$mlkitSmartReply")
 
     implementation("org.tensorflow:tensorflow-lite-metadata:$tfLiteMetadataVersion")
     implementation("com.google.android.gms:play-services-tflite-support:$tfLiteSupportPlayServicesVersion")

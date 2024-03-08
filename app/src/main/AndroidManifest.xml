@@ -19,6 +19,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MachineLearningAndroid"
         tools:targetApi="31" >
+        <meta-data
+            android:name="com.google.mlkit.vision.DEPENDENCIES"
+            android:value="smart_reply" />
+        <activity
+            android:name=".generativeai.ChatActivity"
+            android:exported="false" />
         <activity
             android:name=".mediapipe.TextClassificationActivity"
             android:exported="false" />

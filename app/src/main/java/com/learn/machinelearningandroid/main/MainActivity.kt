@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.learn.machinelearningandroid.camera.CameraActivity
 import com.learn.machinelearningandroid.customview.CustomViewActivity
 import com.learn.machinelearningandroid.databinding.ActivityMainBinding
+import com.learn.machinelearningandroid.generativeai.ChatActivity
 import com.learn.machinelearningandroid.imageclassification.ImageClassificationActivity
 import com.learn.machinelearningandroid.mediapipe.AudioClassificationActivity
 import com.learn.machinelearningandroid.mediapipe.TextClassificationActivity
@@ -60,6 +61,10 @@ class MainActivity : AppCompatActivity() {
             btnTextClassificationMediaPipe.setOnClickListener {
                 navigateToTextClassificationMediaPipe()
             }
+
+            btnSmartReplyGenerativeAi.setOnClickListener {
+                navigateToSmartReplyGenerativeAI()
+            }
         }
     }
 
@@ -106,5 +111,9 @@ class MainActivity : AppCompatActivity() {
 
     private fun navigateToTextClassificationMediaPipe() {
         startActivity(Intent(this, TextClassificationActivity::class.java))
+    }
+
+    private fun navigateToSmartReplyGenerativeAI() {
+        startActivity(Intent(this, ChatActivity::class.java))
     }
 }

@@ -23,4 +23,12 @@
     <string name="classify">Classify</string>
     <string name="text_classifier_failed">Text classifier failed to initialize. See error logs for details.</string>
     <string name="firebaseml_model_download_failed">Model download failed, please check your connection.</string>
+    <string name="input_text_hint">Type a message</string>
+    <string name="send_message_text">Send</string>
+    <string name="switch_user_text">Switch User</string>
+    <string name="chatting_as_evans">Chatting as Evans</string>
+    <string name="chatting_as_kai">Chatting as Kai</string>
+    <string name="option_menu_generate_basic_chat_history">Generate basic chat history</string>
+    <string name="option_menu_generate_sensitive_chat_history">Generate sensitive chat history</string>
+    <string name="clear_chat_history">Clear chat history</string>
 </resources>
