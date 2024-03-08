@@ -1,4 +1,4 @@
-package com.learn.machinelearningandroid.generativeai
+package com.learn.machinelearningandroid.generativeai.smartreply
 
 import android.annotation.SuppressLint
 import android.content.Context

@@ -6,7 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.learn.machinelearningandroid.camera.CameraActivity
 import com.learn.machinelearningandroid.customview.CustomViewActivity
 import com.learn.machinelearningandroid.databinding.ActivityMainBinding
-import com.learn.machinelearningandroid.generativeai.ChatActivity
+import com.learn.machinelearningandroid.generativeai.smartreply.ChatActivity
 import com.learn.machinelearningandroid.imageclassification.ImageClassificationActivity
 import com.learn.machinelearningandroid.mediapipe.AudioClassificationActivity
 import com.learn.machinelearningandroid.mediapipe.TextClassificationActivity

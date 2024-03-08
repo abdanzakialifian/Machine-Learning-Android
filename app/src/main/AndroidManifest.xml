@@ -23,7 +23,7 @@
             android:name="com.google.mlkit.vision.DEPENDENCIES"
             android:value="smart_reply" />
         <activity
-            android:name=".generativeai.ChatActivity"
+            android:name=".generativeai.smartreply.ChatActivity"
             android:exported="false" />
         <activity
             android:name=".mediapipe.TextClassificationActivity"

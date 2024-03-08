@@ -1,4 +1,4 @@
-package com.learn.machinelearningandroid.generativeai
+package com.learn.machinelearningandroid.generativeai.smartreply
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -29,7 +29,7 @@ class ReplyOptionsAdapter(
         return ViewHolder(binding)
     }
 
-    override fun onBindViewHolder(holder: ReplyOptionsAdapter.ViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val optionText = smartReplayOptions[position].text
         holder.binding.tvSmartReplyOption.text = optionText
         holder.itemView.setOnClickListener {

@@ -1,4 +1,4 @@
-package com.learn.machinelearningandroid.generativeai
+package com.learn.machinelearningandroid.generativeai.smartreply
 
 data class Message(
     val text: String,

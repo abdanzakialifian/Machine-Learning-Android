@@ -1,4 +1,4 @@
-package com.learn.machinelearningandroid.generativeai
+package com.learn.machinelearningandroid.generativeai.smartreply
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity

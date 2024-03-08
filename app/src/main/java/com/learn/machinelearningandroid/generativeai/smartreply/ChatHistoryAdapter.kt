@@ -1,4 +1,4 @@
-package com.learn.machinelearningandroid.generativeai
+package com.learn.machinelearningandroid.generativeai.smartreply
 
 import android.view.LayoutInflater
 import android.view.View
@@ -24,13 +24,13 @@ class ChatHistoryAdapter : RecyclerView.Adapter<ChatHistoryAdapter.MessageViewHo
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
-    ): ChatHistoryAdapter.MessageViewHolder {
+    ): MessageViewHolder {
         val messageItemView =
             LayoutInflater.from(parent.context).inflate(viewType, parent, false) as ViewGroup
         return MessageViewHolder(messageItemView)
     }
 
-    override fun onBindViewHolder(holder: ChatHistoryAdapter.MessageViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: MessageViewHolder, position: Int) {
 
         val userProfile = holder.itemView.findViewById<ImageView>(R.id.iv_userProfile)
         val userMessageText = holder.itemView.findViewById<TextView>(R.id.tv_userMessageText)
