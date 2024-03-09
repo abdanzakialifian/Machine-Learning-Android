@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.learn.machinelearningandroid.camera.CameraActivity
 import com.learn.machinelearningandroid.customview.CustomViewActivity
 import com.learn.machinelearningandroid.databinding.ActivityMainBinding
+import com.learn.machinelearningandroid.generativeai.bertqa.BertQaActivity
 import com.learn.machinelearningandroid.generativeai.smartreply.ChatActivity
 import com.learn.machinelearningandroid.imageclassification.ImageClassificationActivity
 import com.learn.machinelearningandroid.mediapipe.AudioClassificationActivity
@@ -65,6 +66,10 @@ class MainActivity : AppCompatActivity() {
             btnSmartReplyGenerativeAi.setOnClickListener {
                 navigateToSmartReplyGenerativeAI()
             }
+
+            btnBertQaGenerativeAi.setOnClickListener {
+                navigateToBertQaGenerativeAI()
+            }
         }
     }
 
@@ -115,5 +120,9 @@ class MainActivity : AppCompatActivity() {
 
     private fun navigateToSmartReplyGenerativeAI() {
         startActivity(Intent(this, ChatActivity::class.java))
+    }
+
+    private fun navigateToBertQaGenerativeAI() {
+        startActivity(Intent(this, BertQaActivity::class.java))
     }
 }
